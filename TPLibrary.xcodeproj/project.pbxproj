@@ -10,6 +10,17 @@
 		26AE40DA1790F39900A1EDEC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26AE40D91790F39900A1EDEC /* Foundation.framework */; };
 		26AE40DF1790F39900A1EDEC /* TPLibrary.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 26AE40DE1790F39900A1EDEC /* TPLibrary.h */; };
 		26AE40E11790F39900A1EDEC /* TPLibrary.m in Sources */ = {isa = PBXBuildFile; fileRef = 26AE40E01790F39900A1EDEC /* TPLibrary.m */; };
+		26AE40EA1790F3CF00A1EDEC /* NSString+TPCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 26AE40E91790F3CF00A1EDEC /* NSString+TPCategory.m */; };
+		26AE40EC1790F44100A1EDEC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26AE40EB1790F44100A1EDEC /* UIKit.framework */; };
+		26AE40EF1790F49E00A1EDEC /* NSDate+TPCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 26AE40EE1790F49E00A1EDEC /* NSDate+TPCategory.m */; };
+		26AE40F21790F52F00A1EDEC /* UIColor+TPCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 26AE40F11790F52F00A1EDEC /* UIColor+TPCategory.m */; };
+		26AE40F51790F6A400A1EDEC /* UIImage+TPCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 26AE40F41790F6A300A1EDEC /* UIImage+TPCategory.m */; };
+		26AE40F81790F73400A1EDEC /* UIDevice+TPCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 26AE40F71790F73400A1EDEC /* UIDevice+TPCategory.m */; };
+		26AE40FB1790F7B900A1EDEC /* UIView+TPCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 26AE40FA1790F7B800A1EDEC /* UIView+TPCategory.m */; };
+		26AE40FE1790F99C00A1EDEC /* UIScrollview+TPCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 26AE40FD1790F99B00A1EDEC /* UIScrollview+TPCategory.m */; };
+		26AE41051790FE9D00A1EDEC /* NSData+TPCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 26AE41041790FE9D00A1EDEC /* NSData+TPCategory.m */; };
+		26AE41081791001500A1EDEC /* NSDictionary+TPCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 26AE41071791001500A1EDEC /* NSDictionary+TPCategory.m */; };
+		26AE412D1791218100A1EDEC /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26AE412C1791218100A1EDEC /* QuartzCore.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -31,6 +42,26 @@
 		26AE40DD1790F39900A1EDEC /* TPLibrary-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TPLibrary-Prefix.pch"; sourceTree = "<group>"; };
 		26AE40DE1790F39900A1EDEC /* TPLibrary.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TPLibrary.h; sourceTree = "<group>"; };
 		26AE40E01790F39900A1EDEC /* TPLibrary.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TPLibrary.m; sourceTree = "<group>"; };
+		26AE40E81790F3CF00A1EDEC /* NSString+TPCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+TPCategory.h"; sourceTree = "<group>"; };
+		26AE40E91790F3CF00A1EDEC /* NSString+TPCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+TPCategory.m"; sourceTree = "<group>"; };
+		26AE40EB1790F44100A1EDEC /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		26AE40ED1790F49E00A1EDEC /* NSDate+TPCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+TPCategory.h"; sourceTree = "<group>"; };
+		26AE40EE1790F49E00A1EDEC /* NSDate+TPCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+TPCategory.m"; sourceTree = "<group>"; };
+		26AE40F01790F52F00A1EDEC /* UIColor+TPCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+TPCategory.h"; sourceTree = "<group>"; };
+		26AE40F11790F52F00A1EDEC /* UIColor+TPCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+TPCategory.m"; sourceTree = "<group>"; };
+		26AE40F31790F6A300A1EDEC /* UIImage+TPCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+TPCategory.h"; sourceTree = "<group>"; };
+		26AE40F41790F6A300A1EDEC /* UIImage+TPCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+TPCategory.m"; sourceTree = "<group>"; };
+		26AE40F61790F73400A1EDEC /* UIDevice+TPCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIDevice+TPCategory.h"; sourceTree = "<group>"; };
+		26AE40F71790F73400A1EDEC /* UIDevice+TPCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIDevice+TPCategory.m"; sourceTree = "<group>"; };
+		26AE40F91790F7B800A1EDEC /* UIView+TPCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+TPCategory.h"; sourceTree = "<group>"; };
+		26AE40FA1790F7B800A1EDEC /* UIView+TPCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+TPCategory.m"; sourceTree = "<group>"; };
+		26AE40FC1790F99B00A1EDEC /* UIScrollview+TPCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollview+TPCategory.h"; sourceTree = "<group>"; };
+		26AE40FD1790F99B00A1EDEC /* UIScrollview+TPCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollview+TPCategory.m"; sourceTree = "<group>"; };
+		26AE41031790FE9D00A1EDEC /* NSData+TPCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+TPCategory.h"; sourceTree = "<group>"; };
+		26AE41041790FE9D00A1EDEC /* NSData+TPCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+TPCategory.m"; sourceTree = "<group>"; };
+		26AE41061791001500A1EDEC /* NSDictionary+TPCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+TPCategory.h"; sourceTree = "<group>"; };
+		26AE41071791001500A1EDEC /* NSDictionary+TPCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+TPCategory.m"; sourceTree = "<group>"; };
+		26AE412C1791218100A1EDEC /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,6 +69,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				26AE412D1791218100A1EDEC /* QuartzCore.framework in Frameworks */,
+				26AE40EC1790F44100A1EDEC /* UIKit.framework in Frameworks */,
 				26AE40DA1790F39900A1EDEC /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -65,6 +98,8 @@
 		26AE40D81790F39900A1EDEC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				26AE412C1791218100A1EDEC /* QuartzCore.framework */,
+				26AE40EB1790F44100A1EDEC /* UIKit.framework */,
 				26AE40D91790F39900A1EDEC /* Foundation.framework */,
 			);
 			name = Frameworks;
@@ -73,6 +108,8 @@
 		26AE40DB1790F39900A1EDEC /* TPLibrary */ = {
 			isa = PBXGroup;
 			children = (
+				26AE40FF1790FA7800A1EDEC /* UI */,
+				26AE40E71790F3AE00A1EDEC /* Category */,
 				26AE40DE1790F39900A1EDEC /* TPLibrary.h */,
 				26AE40E01790F39900A1EDEC /* TPLibrary.m */,
 				26AE40DC1790F39900A1EDEC /* Supporting Files */,
@@ -86,6 +123,38 @@
 				26AE40DD1790F39900A1EDEC /* TPLibrary-Prefix.pch */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		26AE40E71790F3AE00A1EDEC /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				26AE41061791001500A1EDEC /* NSDictionary+TPCategory.h */,
+				26AE41071791001500A1EDEC /* NSDictionary+TPCategory.m */,
+				26AE41031790FE9D00A1EDEC /* NSData+TPCategory.h */,
+				26AE41041790FE9D00A1EDEC /* NSData+TPCategory.m */,
+				26AE40FC1790F99B00A1EDEC /* UIScrollview+TPCategory.h */,
+				26AE40FD1790F99B00A1EDEC /* UIScrollview+TPCategory.m */,
+				26AE40F91790F7B800A1EDEC /* UIView+TPCategory.h */,
+				26AE40FA1790F7B800A1EDEC /* UIView+TPCategory.m */,
+				26AE40F61790F73400A1EDEC /* UIDevice+TPCategory.h */,
+				26AE40F71790F73400A1EDEC /* UIDevice+TPCategory.m */,
+				26AE40F31790F6A300A1EDEC /* UIImage+TPCategory.h */,
+				26AE40F41790F6A300A1EDEC /* UIImage+TPCategory.m */,
+				26AE40F01790F52F00A1EDEC /* UIColor+TPCategory.h */,
+				26AE40F11790F52F00A1EDEC /* UIColor+TPCategory.m */,
+				26AE40ED1790F49E00A1EDEC /* NSDate+TPCategory.h */,
+				26AE40EE1790F49E00A1EDEC /* NSDate+TPCategory.m */,
+				26AE40E81790F3CF00A1EDEC /* NSString+TPCategory.h */,
+				26AE40E91790F3CF00A1EDEC /* NSString+TPCategory.m */,
+			);
+			name = Category;
+			sourceTree = "<group>";
+		};
+		26AE40FF1790FA7800A1EDEC /* UI */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = UI;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -140,6 +209,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				26AE40E11790F39900A1EDEC /* TPLibrary.m in Sources */,
+				26AE40EA1790F3CF00A1EDEC /* NSString+TPCategory.m in Sources */,
+				26AE40EF1790F49E00A1EDEC /* NSDate+TPCategory.m in Sources */,
+				26AE40F21790F52F00A1EDEC /* UIColor+TPCategory.m in Sources */,
+				26AE40F51790F6A400A1EDEC /* UIImage+TPCategory.m in Sources */,
+				26AE40F81790F73400A1EDEC /* UIDevice+TPCategory.m in Sources */,
+				26AE40FB1790F7B900A1EDEC /* UIView+TPCategory.m in Sources */,
+				26AE40FE1790F99C00A1EDEC /* UIScrollview+TPCategory.m in Sources */,
+				26AE41051790FE9D00A1EDEC /* NSData+TPCategory.m in Sources */,
+				26AE41081791001500A1EDEC /* NSDictionary+TPCategory.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
