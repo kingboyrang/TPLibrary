@@ -1,0 +1,240 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		26AE40DA1790F39900A1EDEC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26AE40D91790F39900A1EDEC /* Foundation.framework */; };
+		26AE40DF1790F39900A1EDEC /* TPLibrary.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 26AE40DE1790F39900A1EDEC /* TPLibrary.h */; };
+		26AE40E11790F39900A1EDEC /* TPLibrary.m in Sources */ = {isa = PBXBuildFile; fileRef = 26AE40E01790F39900A1EDEC /* TPLibrary.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		26AE40D41790F39900A1EDEC /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/${PRODUCT_NAME}";
+			dstSubfolderSpec = 16;
+			files = (
+				26AE40DF1790F39900A1EDEC /* TPLibrary.h in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		26AE40D61790F39900A1EDEC /* libTPLibrary.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libTPLibrary.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		26AE40D91790F39900A1EDEC /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		26AE40DD1790F39900A1EDEC /* TPLibrary-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TPLibrary-Prefix.pch"; sourceTree = "<group>"; };
+		26AE40DE1790F39900A1EDEC /* TPLibrary.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TPLibrary.h; sourceTree = "<group>"; };
+		26AE40E01790F39900A1EDEC /* TPLibrary.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TPLibrary.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		26AE40D31790F39900A1EDEC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				26AE40DA1790F39900A1EDEC /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		26AE40CB1790F39900A1EDEC = {
+			isa = PBXGroup;
+			children = (
+				26AE40DB1790F39900A1EDEC /* TPLibrary */,
+				26AE40D81790F39900A1EDEC /* Frameworks */,
+				26AE40D71790F39900A1EDEC /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		26AE40D71790F39900A1EDEC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				26AE40D61790F39900A1EDEC /* libTPLibrary.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		26AE40D81790F39900A1EDEC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				26AE40D91790F39900A1EDEC /* Foundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		26AE40DB1790F39900A1EDEC /* TPLibrary */ = {
+			isa = PBXGroup;
+			children = (
+				26AE40DE1790F39900A1EDEC /* TPLibrary.h */,
+				26AE40E01790F39900A1EDEC /* TPLibrary.m */,
+				26AE40DC1790F39900A1EDEC /* Supporting Files */,
+			);
+			path = TPLibrary;
+			sourceTree = "<group>";
+		};
+		26AE40DC1790F39900A1EDEC /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				26AE40DD1790F39900A1EDEC /* TPLibrary-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		26AE40D51790F39900A1EDEC /* TPLibrary */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 26AE40E41790F39900A1EDEC /* Build configuration list for PBXNativeTarget "TPLibrary" */;
+			buildPhases = (
+				26AE40D21790F39900A1EDEC /* Sources */,
+				26AE40D31790F39900A1EDEC /* Frameworks */,
+				26AE40D41790F39900A1EDEC /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TPLibrary;
+			productName = TPLibrary;
+			productReference = 26AE40D61790F39900A1EDEC /* libTPLibrary.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		26AE40CD1790F39900A1EDEC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0450;
+				ORGANIZATIONNAME = rang;
+			};
+			buildConfigurationList = 26AE40D01790F39900A1EDEC /* Build configuration list for PBXProject "TPLibrary" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 26AE40CB1790F39900A1EDEC;
+			productRefGroup = 26AE40D71790F39900A1EDEC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				26AE40D51790F39900A1EDEC /* TPLibrary */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		26AE40D21790F39900A1EDEC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				26AE40E11790F39900A1EDEC /* TPLibrary.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		26AE40E21790F39900A1EDEC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		26AE40E31790F39900A1EDEC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		26AE40E51790F39900A1EDEC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/TPLibrary.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TPLibrary/TPLibrary-Prefix.pch";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		26AE40E61790F39900A1EDEC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/TPLibrary.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TPLibrary/TPLibrary-Prefix.pch";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		26AE40D01790F39900A1EDEC /* Build configuration list for PBXProject "TPLibrary" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				26AE40E21790F39900A1EDEC /* Debug */,
+				26AE40E31790F39900A1EDEC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		26AE40E41790F39900A1EDEC /* Build configuration list for PBXNativeTarget "TPLibrary" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				26AE40E51790F39900A1EDEC /* Debug */,
+				26AE40E61790F39900A1EDEC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 26AE40CD1790F39900A1EDEC /* Project object */;
+}
