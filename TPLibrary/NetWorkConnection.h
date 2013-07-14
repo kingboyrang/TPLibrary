@@ -1,0 +1,36 @@
+//
+//  NetWorkConnection.h
+//  SystemLeave
+//
+//  Created by aJia on 2012/3/5.
+//  Copyright 2012 __MyCompanyName__. All rights reserved.
+//
+
+#import <Foundation/Foundation.h>
+#import "Reachability.h"
+@protocol NetWorkDelegate <NSObject>
+@optional
+-(void)NetWorkHandler:(NetworkStatus)status IsConnection:(BOOL)hasConnection;
+@end
+
+
+@interface NetWorkConnection : NSObject {
+    Reachability *hostReach;
+}
+@property(nonatomic,assign) id<NetWorkDelegate> delegate;
+//单例模式
++ (NetWorkConnection *)sharedInstance;
+//实时监听连接
+-(void)ListenerConection:(id<NetWorkDelegate>)thedelegate;
+-(void)ListenerConection:(NSString*)url delegate:(id<NetWorkDelegate>)thedelegate;
+
+//判断url是否可以访问
++(BOOL)isEnabledURL:(NSString*)url;
+//判斷網路是否连通
++(BOOL)IsEnableConnection;
++(BOOL)hasNetWork;
+// 是否wifi
++ (BOOL)IsEnableWIFI;
+// 是否3G
++(BOOL)IsEnable3G;
+@end

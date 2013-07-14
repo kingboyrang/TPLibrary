@@ -7,7 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
-
+#import <UIKit/UIKit.h>
 @interface TPLibrary : NSObject
-
+//打开网页
++(void)openUrl:(NSString*)url;
+//等比缩放
++(CGSize)autoZoomSize:(CGSize)defautSize orginSize:(CGSize)size;
 @end
