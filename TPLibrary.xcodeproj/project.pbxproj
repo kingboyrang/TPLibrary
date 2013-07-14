@@ -30,6 +30,54 @@
 		26B479DA179283D800231C18 /* LocationGPS.m in Sources */ = {isa = PBXBuildFile; fileRef = 26B479D9179283D800231C18 /* LocationGPS.m */; };
 		26B479DC1792846200231C18 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26B479DB1792846200231C18 /* CoreLocation.framework */; };
 		26B479ED179287BF00231C18 /* NetWorkConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = 26B479EC179287BF00231C18 /* NetWorkConnection.m */; };
+		26B479FD17929B2F00231C18 /* NetWorkConnection.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 26B479EB179287BF00231C18 /* NetWorkConnection.h */; };
+		26B479FE17929B3C00231C18 /* LocationGPS.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 26B479D8179283D800231C18 /* LocationGPS.h */; };
+		26B479FF17929B4100231C18 /* SVGeocoder.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 26B479D2179283C900231C18 /* SVGeocoder.h */; };
+		26B47A0017929B4500231C18 /* SVPlacemark.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 26B479D4179283C900231C18 /* SVPlacemark.h */; };
+		26B47A0117929B4A00231C18 /* DownloadManager.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 26B479CA1792830500231C18 /* DownloadManager.h */; };
+		26B47A0217929B5100231C18 /* DownLoadArgs.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 26B479CC1792830500231C18 /* DownLoadArgs.h */; };
+		26B47A0317929B5500231C18 /* ServiceHelper.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 26B479C31792825100231C18 /* ServiceHelper.h */; };
+		26B47A0417929B5A00231C18 /* ServiceArgs.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 26B479C51792825100231C18 /* ServiceArgs.h */; };
+		26B47A0517929B6000231C18 /* Reachability.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 26B7A3281791A77D002BB336 /* Reachability.h */; };
+		26B47A0617929B6600231C18 /* ASIDownloadCache.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 26B7A3061791A705002BB336 /* ASIDownloadCache.h */; };
+		26B47A0717929B6B00231C18 /* ASINetworkQueue.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 26B7A3081791A705002BB336 /* ASINetworkQueue.h */; };
+		26B47A0817929B7100231C18 /* ASIDataDecompressor.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 26B7A30A1791A705002BB336 /* ASIDataDecompressor.h */; };
+		26B47A0917929B7600231C18 /* ASIDataCompressor.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 26B7A30C1791A705002BB336 /* ASIDataCompressor.h */; };
+		26B47A0A17929B8800231C18 /* ASIInputStream.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 26B7A30E1791A705002BB336 /* ASIInputStream.h */; };
+		26B47A0B17929B8E00231C18 /* ASIAuthenticationDialog.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 26B7A3101791A705002BB336 /* ASIAuthenticationDialog.h */; };
+		26B47A0C17929B9500231C18 /* ASICacheDelegate.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 26B7A3121791A705002BB336 /* ASICacheDelegate.h */; };
+		26B47A0D17929B9A00231C18 /* ASIProgressDelegate.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 26B7A3131791A705002BB336 /* ASIProgressDelegate.h */; };
+		26B47A0E17929BA000231C18 /* SoapXmlParseHelper.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 26B7A2FF1791A66F002BB336 /* SoapXmlParseHelper.h */; };
+		26B47A0F17929BA500231C18 /* ASIHTTPRequest.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 26B7A3161791A705002BB336 /* ASIHTTPRequest.h */; };
+		26B47A1017929BAB00231C18 /* ASIHTTPRequestDelegate.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 26B7A3141791A705002BB336 /* ASIHTTPRequestDelegate.h */; };
+		26B47A1117929BB100231C18 /* ASIHTTPRequestConfig.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 26B7A3151791A705002BB336 /* ASIHTTPRequestConfig.h */; };
+		26B47A1217929BB600231C18 /* GDataXMLNode.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 26B7A2FB1791A66F002BB336 /* GDataXMLNode.h */; };
+		26B47A1317929BBD00231C18 /* GDataDefines.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 26B7A2FD1791A66F002BB336 /* GDataDefines.h */; };
+		26B47A1417929BC400231C18 /* GDataTargetNamespace.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 26B7A2FE1791A66F002BB336 /* GDataTargetNamespace.h */; };
+		26B47A1517929BCD00231C18 /* SDWebImageManager.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 26B7A3381791AA5F002BB336 /* SDWebImageManager.h */; };
+		26B47A1617929BDD00231C18 /* SDWebImageDecoder.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 26B7A33A1791AA5F002BB336 /* SDWebImageDecoder.h */; };
+		26B47A1717929BE600231C18 /* NSString+TPCategory.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 26AE40E81790F3CF00A1EDEC /* NSString+TPCategory.h */; };
+		26B47A1817929BED00231C18 /* NSDate+TPCategory.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 26AE40ED1790F49E00A1EDEC /* NSDate+TPCategory.h */; };
+		26B47A1917929BF400231C18 /* UIColor+TPCategory.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 26AE40F01790F52F00A1EDEC /* UIColor+TPCategory.h */; };
+		26B47A1A17929BFB00231C18 /* UIImage+TPCategory.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 26AE40F31790F6A300A1EDEC /* UIImage+TPCategory.h */; };
+		26B47A1B17929C0100231C18 /* UIScrollview+TPCategory.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 26AE40FC1790F99B00A1EDEC /* UIScrollview+TPCategory.h */; };
+		26B47A1C17929C0800231C18 /* UIDevice+TPCategory.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 26AE40F61790F73400A1EDEC /* UIDevice+TPCategory.h */; };
+		26B47A1D17929C0F00231C18 /* UIView+TPCategory.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 26AE40F91790F7B800A1EDEC /* UIView+TPCategory.h */; };
+		26B47A1E17929C1600231C18 /* NSData+TPCategory.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 26AE41031790FE9D00A1EDEC /* NSData+TPCategory.h */; };
+		26B47A1F17929C1C00231C18 /* NSDictionary+TPCategory.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 26AE41061791001500A1EDEC /* NSDictionary+TPCategory.h */; };
+		26B47A2017929C2300231C18 /* SDWebImagePrefetcher.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 26B7A33C1791AA5F002BB336 /* SDWebImagePrefetcher.h */; };
+		26B47A2117929C2900231C18 /* UIImage+MultiFormat.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 26B7A2DF1791A459002BB336 /* UIImage+MultiFormat.h */; };
+		26B47A2217929C3600231C18 /* NSData+GIF.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 26B7A2E11791A459002BB336 /* NSData+GIF.h */; };
+		26B47A2317929C3E00231C18 /* UIImage+GIF.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 26B7A2E31791A459002BB336 /* UIImage+GIF.h */; };
+		26B47A2417929C4500231C18 /* UIImage+WebP.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 26B7A2E51791A459002BB336 /* UIImage+WebP.h */; };
+		26B47A2517929C5000231C18 /* MKAnnotationView+WebCache.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 26B7A2E71791A459002BB336 /* MKAnnotationView+WebCache.h */; };
+		26B47A2617929C5800231C18 /* UIButton+WebCache.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 26B7A2E91791A459002BB336 /* UIButton+WebCache.h */; };
+		26B47A2717929C6000231C18 /* UIImageView+WebCache.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 26B7A2EB1791A459002BB336 /* UIImageView+WebCache.h */; };
+		26B47A2817929C6600231C18 /* SDImageCache.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 26B7A2DB1791A43D002BB336 /* SDImageCache.h */; };
+		26B47A2917929C6E00231C18 /* SDWebImageDownloader.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 26B7A2D41791A425002BB336 /* SDWebImageDownloader.h */; };
+		26B47A2A17929C7700231C18 /* SDWebImageDownloaderOperation.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 26B7A2D61791A425002BB336 /* SDWebImageDownloaderOperation.h */; };
+		26B47A2B17929C7D00231C18 /* SDWebImageCompat.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 26B7A2CF1791A409002BB336 /* SDWebImageCompat.h */; };
+		26B47A2C17929C8700231C18 /* SDWebImageOperation.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 26B7A2D11791A409002BB336 /* SDWebImageOperation.h */; };
 		26B7A2D21791A409002BB336 /* SDWebImageCompat.m in Sources */ = {isa = PBXBuildFile; fileRef = 26B7A2D01791A409002BB336 /* SDWebImageCompat.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
 		26B7A2D81791A425002BB336 /* SDWebImageDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = 26B7A2D51791A425002BB336 /* SDWebImageDownloader.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
 		26B7A2D91791A425002BB336 /* SDWebImageDownloaderOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 26B7A2D71791A425002BB336 /* SDWebImageDownloaderOperation.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
@@ -69,6 +117,54 @@
 			dstPath = "include/${PRODUCT_NAME}";
 			dstSubfolderSpec = 16;
 			files = (
+				26B47A2C17929C8700231C18 /* SDWebImageOperation.h in CopyFiles */,
+				26B47A2B17929C7D00231C18 /* SDWebImageCompat.h in CopyFiles */,
+				26B47A2A17929C7700231C18 /* SDWebImageDownloaderOperation.h in CopyFiles */,
+				26B47A2917929C6E00231C18 /* SDWebImageDownloader.h in CopyFiles */,
+				26B47A2817929C6600231C18 /* SDImageCache.h in CopyFiles */,
+				26B47A2717929C6000231C18 /* UIImageView+WebCache.h in CopyFiles */,
+				26B47A2617929C5800231C18 /* UIButton+WebCache.h in CopyFiles */,
+				26B47A2517929C5000231C18 /* MKAnnotationView+WebCache.h in CopyFiles */,
+				26B47A2417929C4500231C18 /* UIImage+WebP.h in CopyFiles */,
+				26B47A2317929C3E00231C18 /* UIImage+GIF.h in CopyFiles */,
+				26B47A2217929C3600231C18 /* NSData+GIF.h in CopyFiles */,
+				26B47A2117929C2900231C18 /* UIImage+MultiFormat.h in CopyFiles */,
+				26B47A2017929C2300231C18 /* SDWebImagePrefetcher.h in CopyFiles */,
+				26B47A1F17929C1C00231C18 /* NSDictionary+TPCategory.h in CopyFiles */,
+				26B47A1E17929C1600231C18 /* NSData+TPCategory.h in CopyFiles */,
+				26B47A1D17929C0F00231C18 /* UIView+TPCategory.h in CopyFiles */,
+				26B47A1C17929C0800231C18 /* UIDevice+TPCategory.h in CopyFiles */,
+				26B47A1B17929C0100231C18 /* UIScrollview+TPCategory.h in CopyFiles */,
+				26B47A1A17929BFB00231C18 /* UIImage+TPCategory.h in CopyFiles */,
+				26B47A1917929BF400231C18 /* UIColor+TPCategory.h in CopyFiles */,
+				26B47A1817929BED00231C18 /* NSDate+TPCategory.h in CopyFiles */,
+				26B47A1717929BE600231C18 /* NSString+TPCategory.h in CopyFiles */,
+				26B47A1617929BDD00231C18 /* SDWebImageDecoder.h in CopyFiles */,
+				26B47A1517929BCD00231C18 /* SDWebImageManager.h in CopyFiles */,
+				26B47A1417929BC400231C18 /* GDataTargetNamespace.h in CopyFiles */,
+				26B47A1317929BBD00231C18 /* GDataDefines.h in CopyFiles */,
+				26B47A1217929BB600231C18 /* GDataXMLNode.h in CopyFiles */,
+				26B47A1117929BB100231C18 /* ASIHTTPRequestConfig.h in CopyFiles */,
+				26B47A1017929BAB00231C18 /* ASIHTTPRequestDelegate.h in CopyFiles */,
+				26B47A0F17929BA500231C18 /* ASIHTTPRequest.h in CopyFiles */,
+				26B47A0E17929BA000231C18 /* SoapXmlParseHelper.h in CopyFiles */,
+				26B47A0D17929B9A00231C18 /* ASIProgressDelegate.h in CopyFiles */,
+				26B47A0C17929B9500231C18 /* ASICacheDelegate.h in CopyFiles */,
+				26B47A0B17929B8E00231C18 /* ASIAuthenticationDialog.h in CopyFiles */,
+				26B47A0A17929B8800231C18 /* ASIInputStream.h in CopyFiles */,
+				26B47A0917929B7600231C18 /* ASIDataCompressor.h in CopyFiles */,
+				26B47A0817929B7100231C18 /* ASIDataDecompressor.h in CopyFiles */,
+				26B47A0717929B6B00231C18 /* ASINetworkQueue.h in CopyFiles */,
+				26B47A0617929B6600231C18 /* ASIDownloadCache.h in CopyFiles */,
+				26B47A0517929B6000231C18 /* Reachability.h in CopyFiles */,
+				26B47A0417929B5A00231C18 /* ServiceArgs.h in CopyFiles */,
+				26B47A0317929B5500231C18 /* ServiceHelper.h in CopyFiles */,
+				26B47A0217929B5100231C18 /* DownLoadArgs.h in CopyFiles */,
+				26B47A0117929B4A00231C18 /* DownloadManager.h in CopyFiles */,
+				26B47A0017929B4500231C18 /* SVPlacemark.h in CopyFiles */,
+				26B479FF17929B4100231C18 /* SVGeocoder.h in CopyFiles */,
+				26B479FE17929B3C00231C18 /* LocationGPS.h in CopyFiles */,
+				26B479FD17929B2F00231C18 /* NetWorkConnection.h in CopyFiles */,
 				26AE40DF1790F39900A1EDEC /* TPLibrary.h in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -622,8 +718,10 @@
 				DSTROOT = /tmp/TPLibrary.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TPLibrary/TPLibrary-Prefix.pch";
+				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 			};
 			name = Debug;
@@ -634,8 +732,10 @@
 				DSTROOT = /tmp/TPLibrary.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TPLibrary/TPLibrary-Prefix.pch";
+				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 			};
 			name = Release;
