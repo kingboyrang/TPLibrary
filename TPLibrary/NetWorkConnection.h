@@ -8,14 +8,18 @@
 
 #import <Foundation/Foundation.h>
 #import "Reachability.h"
+
+//block
+typedef void (^ListenerNetWorkResult)(NetworkStatus status,BOOL isConnection);
+
 @protocol NetWorkDelegate <NSObject>
 @optional
 -(void)NetWorkHandler:(NetworkStatus)status IsConnection:(BOOL)hasConnection;
 @end
 
-
 @interface NetWorkConnection : NSObject {
     Reachability *hostReach;
+    ListenerNetWorkResult _listenerNetWorkResult;
 }
 @property(nonatomic,assign) id<NetWorkDelegate> delegate;
 //单例模式
@@ -23,6 +27,7 @@
 //实时监听连接
 -(void)ListenerConection:(id<NetWorkDelegate>)thedelegate;
 -(void)ListenerConection:(NSString*)url delegate:(id<NetWorkDelegate>)thedelegate;
+-(void)dynamicListenerNetwork:(ListenerNetWorkResult)networkResult;
 
 //判断url是否可以访问
 +(BOOL)isEnabledURL:(NSString*)url;

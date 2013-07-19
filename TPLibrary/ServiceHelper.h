@@ -49,6 +49,8 @@ typedef void (^finishBlockQueueComplete)();
  ***/
 -(NSString*)syncService:(ServiceArgs*)args;
 -(NSString*)syncService:(ServiceArgs*)args error:(NSError**)error;
++(NSString*)syncService:(ServiceArgs*)args;
++(NSString*)syncService:(ServiceArgs*)args error:(NSError**)error;
 /***
  **异步请求
  ***/
@@ -56,6 +58,9 @@ typedef void (^finishBlockQueueComplete)();
 -(void)asynService:(ServiceArgs*)args delegate:(id<ServiceHelperDelegate>)theDelegate;
 -(void)asynService:(ServiceArgs*)args completed:(finishBlockRequest)finish failed:(failedBlockRequest)failed;
 -(void)asynService:(ServiceArgs*)args progress:(progressRequestBlock)progress completed:(finishBlockRequest)finish failed:(failedBlockRequest)failed;
++(void)asynService:(ServiceArgs*)args delegate:(id<ServiceHelperDelegate>)theDelegate;
++(void)asynService:(ServiceArgs*)args completed:(finishBlockRequest)finish failed:(failedBlockRequest)failed;
++(void)asynService:(ServiceArgs*)args progress:(progressRequestBlock)progress completed:(finishBlockRequest)finish failed:(failedBlockRequest)failed;
 /***
  **队列请求
  ***/

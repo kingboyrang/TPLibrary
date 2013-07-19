@@ -49,6 +49,19 @@
     [self updateInterfaceWithReachability: hostReach];
    
 }
+-(void)dynamicListenerNetwork:(ListenerNetWorkResult)networkResult{
+    Block_release(_listenerNetWorkResult);
+    _listenerNetWorkResult=Block_copy(networkResult);
+    NSURL *webURL=[NSURL URLWithString:@"http://www.baidu.com"];
+    //开启网络状况的监听
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(reachabilityChanged:)
+                                                 name: kReachabilityChangedNotification
+                                               object: nil];
+    hostReach = [[Reachability reachabilityWithHostName:[webURL host]] retain];//可以以多种形式初始化
+    [hostReach startNotifier];  //开始监听,会启动一个run loop
+    [self updateInterfaceWithReachability: hostReach];
+}
 /****
 //http://www.oschina.net/code/snippet_588197_11928
 //3g与2g网络区分
@@ -172,11 +185,16 @@
     if (self.delegate&&[self.delegate respondsToSelector:@selector(NetWorkHandler:IsConnection:)]) {
         [self.delegate NetWorkHandler:status IsConnection:b];
     }
+    if (_listenerNetWorkResult) {
+        _listenerNetWorkResult(status,b);
+    }
+    
 }
 -(void)dealloc
 {
     [[NSNotificationCenter defaultCenter] removeObserver:self];
     [hostReach release];
+    Block_release(_listenerNetWorkResult);
     [super dealloc];
 }
 @end

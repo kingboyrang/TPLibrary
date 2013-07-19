@@ -121,6 +121,15 @@
     //处理返回的结果
     return [self soapMessageResult:self.httpRequest];
 }
++(NSString*)syncService:(ServiceArgs*)args
+{
+    return [ServiceHelper syncService:args error:nil];
+}
++(NSString*)syncService:(ServiceArgs*)args error:(NSError**)error
+{
+    ServiceHelper *helper=[ServiceHelper sharedInstance];
+    return [helper syncService:args error:error];
+}
 #pragma mark -
 #pragma mark 异步请求
 -(void)asynService:(ServiceArgs*)args{
@@ -178,6 +187,19 @@
          _failedBlock=Block_copy(failed);
     
     [self asynService:args];
+}
++(void)asynService:(ServiceArgs*)args delegate:(id<ServiceHelperDelegate>)theDelegate
+{
+    ServiceHelper *helper=[ServiceHelper sharedInstance];
+    helper.delegate=theDelegate;
+    [helper asynService:args];
+}
++(void)asynService:(ServiceArgs*)args completed:(finishBlockRequest)finish failed:(failedBlockRequest)failed{
+    [ServiceHelper asynService:args progress:nil completed:finish failed:failed];
+}
++(void)asynService:(ServiceArgs*)args progress:(progressRequestBlock)progress completed:(finishBlockRequest)finish failed:(failedBlockRequest)failed{
+    ServiceHelper *helper=[ServiceHelper sharedInstance];
+    [helper asynService:args progress:progress completed:finish failed:failed];
 }
 #pragma mark -
 #pragma mark ASIHTTPRequest delegate Methods
