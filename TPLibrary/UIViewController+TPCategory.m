@@ -48,20 +48,20 @@
 }
 -(void)showErrorNetWorkConnection{
     if (![self hasNetWork]) {
-        [self showErrorNetWorkConnection:self.view title:@"Network Error" message:@"Check your network connection." dismissError:nil];
+        [self showErrorNoticeInView:self.view title:@"Network Error" message:@"Check your network connection." dismissError:nil];
     }
 }
 -(void)showErrorNetWorkConnection:(UIView*)view title:(NSString*)title message:(NSString*)message dismissError:(void (^)(void))dismiss
 {
     if (![self hasNetWork]) {
-        [self showErrorNetWorkConnection:view title:title message:message dismissError:dismiss];
+        [self showErrorNoticeInView:view title:title message:message dismissError:dismiss];
     }
 }
 -(void)showListenerNewWork{
     NetWorkConnection *network=[NetWorkConnection sharedInstance];
     [network dynamicListenerNetwork:^(NetworkStatus status, BOOL isConnection) {
         if (!isConnection) {
-            [self showErrorNetWorkConnection];
+            [self showErrorNoticeInView:self.view title:@"Network Error" message:@"Check your network connection." dismissError:nil];
         }
     }];
 }
@@ -70,7 +70,7 @@
     NetWorkConnection *network=[NetWorkConnection sharedInstance];
     [network dynamicListenerNetwork:^(NetworkStatus status, BOOL isConnection) {
         if (!isConnection) {
-            [self showErrorNetWorkConnection:view title:title message:message dismissError:dismiss];
+            [self showErrorNoticeInView:view title:title message:message dismissError:dismiss];
         }
     }];
 }

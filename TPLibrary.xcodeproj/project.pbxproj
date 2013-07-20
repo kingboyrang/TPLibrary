@@ -55,6 +55,12 @@
 		26A49A74179ADA170038D4AF /* SDWebImageOperation.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 26A49A44179AD7E20038D4AF /* SDWebImageOperation.h */; };
 		26A49A7C179AE18F0038D4AF /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26A49A7B179AE18F0038D4AF /* ImageIO.framework */; };
 		26A49A7E179AE19B0038D4AF /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26A49A7D179AE19B0038D4AF /* MapKit.framework */; };
+		26A49A86179AE5D40038D4AF /* WBNoticeView.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 26A20101179981ED00A7D3D1 /* WBNoticeView.h */; };
+		26A49A88179AE64C0038D4AF /* UILabel+WBExtensions.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 26A200F6179981ED00A7D3D1 /* UILabel+WBExtensions.h */; };
+		26A49A89179AE6600038D4AF /* WBBlueGradientView.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 26A200F8179981ED00A7D3D1 /* WBBlueGradientView.h */; };
+		26A49A8A179AE6680038D4AF /* WBGrayGradientView.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 26A200FC179981ED00A7D3D1 /* WBGrayGradientView.h */; };
+		26A49A8B179AE66F0038D4AF /* WBNoticeView+ForSubclassEyesOnly.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 26A20100179981ED00A7D3D1 /* WBNoticeView+ForSubclassEyesOnly.h */; };
+		26A49A8C179AE6760038D4AF /* WBRedGradientView.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 26A20103179981ED00A7D3D1 /* WBRedGradientView.h */; };
 		26AE40DA1790F39900A1EDEC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26AE40D91790F39900A1EDEC /* Foundation.framework */; };
 		26AE40DF1790F39900A1EDEC /* TPLibrary.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 26AE40DE1790F39900A1EDEC /* TPLibrary.h */; };
 		26AE40E11790F39900A1EDEC /* TPLibrary.m in Sources */ = {isa = PBXBuildFile; fileRef = 26AE40E01790F39900A1EDEC /* TPLibrary.m */; };
@@ -136,6 +142,12 @@
 			dstPath = "include/${PRODUCT_NAME}";
 			dstSubfolderSpec = 16;
 			files = (
+				26A49A8C179AE6760038D4AF /* WBRedGradientView.h in CopyFiles */,
+				26A49A8B179AE66F0038D4AF /* WBNoticeView+ForSubclassEyesOnly.h in CopyFiles */,
+				26A49A8A179AE6680038D4AF /* WBGrayGradientView.h in CopyFiles */,
+				26A49A89179AE6600038D4AF /* WBBlueGradientView.h in CopyFiles */,
+				26A49A88179AE64C0038D4AF /* UILabel+WBExtensions.h in CopyFiles */,
+				26A49A86179AE5D40038D4AF /* WBNoticeView.h in CopyFiles */,
 				26A49A74179ADA170038D4AF /* SDWebImageOperation.h in CopyFiles */,
 				26A49A73179ADA120038D4AF /* SDWebImageCompat.h in CopyFiles */,
 				26A49A72179ADA0C0038D4AF /* NSData+GIF.h in CopyFiles */,
