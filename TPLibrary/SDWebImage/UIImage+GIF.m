@@ -18,7 +18,7 @@
         return nil;
     }
     
-    CGImageSourceRef source = CGImageSourceCreateWithData(( CFDataRef)data, NULL);
+    CGImageSourceRef source = CGImageSourceCreateWithData((__bridge CFDataRef)data, NULL);
     
     size_t count = CGImageSourceGetCount(source);
 
