@@ -23,6 +23,14 @@
 		26A2012C1799923C00A7D3D1 /* WBNoticeOperation.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 26A200FE179981ED00A7D3D1 /* WBNoticeOperation.h */; };
 		26A2012D1799924900A7D3D1 /* WBSuccessNoticeView.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 26A20107179981ED00A7D3D1 /* WBSuccessNoticeView.h */; };
 		26A2012E1799925F00A7D3D1 /* WBStickyNoticeView.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 26A20105179981ED00A7D3D1 /* WBStickyNoticeView.h */; };
+		26A31EF4179D63FE008AE896 /* MMDrawerBarButtonItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 26A31EED179D63FE008AE896 /* MMDrawerBarButtonItem.m */; };
+		26A31EF5179D63FE008AE896 /* MMDrawerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 26A31EEF179D63FE008AE896 /* MMDrawerController.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
+		26A31EF6179D63FE008AE896 /* MMDrawerVisualState.m in Sources */ = {isa = PBXBuildFile; fileRef = 26A31EF1179D63FE008AE896 /* MMDrawerVisualState.m */; };
+		26A31EF7179D63FE008AE896 /* UIViewController+MMDrawerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 26A31EF3179D63FE008AE896 /* UIViewController+MMDrawerController.m */; };
+		26A31EF9179D64E9008AE896 /* MMDrawerBarButtonItem.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 26A31EEC179D63FE008AE896 /* MMDrawerBarButtonItem.h */; };
+		26A31EFA179D64EE008AE896 /* MMDrawerController.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 26A31EEE179D63FE008AE896 /* MMDrawerController.h */; };
+		26A31EFB179D64F3008AE896 /* MMDrawerVisualState.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 26A31EF0179D63FE008AE896 /* MMDrawerVisualState.h */; };
+		26A31EFC179D64F8008AE896 /* UIViewController+MMDrawerController.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 26A31EF2179D63FE008AE896 /* UIViewController+MMDrawerController.h */; };
 		26A49A15179AD21C0038D4AF /* UIViewController+TPCategory.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 26A200EA17997D0700A7D3D1 /* UIViewController+TPCategory.h */; };
 		26A49A51179AD7E20038D4AF /* MKAnnotationView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 26A49A35179AD7E20038D4AF /* MKAnnotationView+WebCache.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
 		26A49A52179AD7E20038D4AF /* NSData+GIF.m in Sources */ = {isa = PBXBuildFile; fileRef = 26A49A37179AD7E20038D4AF /* NSData+GIF.m */; };
@@ -142,6 +150,10 @@
 			dstPath = "include/${PRODUCT_NAME}";
 			dstSubfolderSpec = 16;
 			files = (
+				26A31EFC179D64F8008AE896 /* UIViewController+MMDrawerController.h in CopyFiles */,
+				26A31EFB179D64F3008AE896 /* MMDrawerVisualState.h in CopyFiles */,
+				26A31EFA179D64EE008AE896 /* MMDrawerController.h in CopyFiles */,
+				26A31EF9179D64E9008AE896 /* MMDrawerBarButtonItem.h in CopyFiles */,
 				26A49A8C179AE6760038D4AF /* WBRedGradientView.h in CopyFiles */,
 				26A49A8B179AE66F0038D4AF /* WBNoticeView+ForSubclassEyesOnly.h in CopyFiles */,
 				26A49A8A179AE6680038D4AF /* WBGrayGradientView.h in CopyFiles */,
@@ -233,6 +245,14 @@
 		26A20106179981ED00A7D3D1 /* WBStickyNoticeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WBStickyNoticeView.m; sourceTree = "<group>"; };
 		26A20107179981ED00A7D3D1 /* WBSuccessNoticeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBSuccessNoticeView.h; sourceTree = "<group>"; };
 		26A20108179981ED00A7D3D1 /* WBSuccessNoticeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WBSuccessNoticeView.m; sourceTree = "<group>"; };
+		26A31EEC179D63FE008AE896 /* MMDrawerBarButtonItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMDrawerBarButtonItem.h; sourceTree = "<group>"; };
+		26A31EED179D63FE008AE896 /* MMDrawerBarButtonItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMDrawerBarButtonItem.m; sourceTree = "<group>"; };
+		26A31EEE179D63FE008AE896 /* MMDrawerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMDrawerController.h; sourceTree = "<group>"; };
+		26A31EEF179D63FE008AE896 /* MMDrawerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMDrawerController.m; sourceTree = "<group>"; };
+		26A31EF0179D63FE008AE896 /* MMDrawerVisualState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMDrawerVisualState.h; sourceTree = "<group>"; };
+		26A31EF1179D63FE008AE896 /* MMDrawerVisualState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMDrawerVisualState.m; sourceTree = "<group>"; };
+		26A31EF2179D63FE008AE896 /* UIViewController+MMDrawerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+MMDrawerController.h"; sourceTree = "<group>"; };
+		26A31EF3179D63FE008AE896 /* UIViewController+MMDrawerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+MMDrawerController.m"; sourceTree = "<group>"; };
 		26A49A34179AD7E20038D4AF /* MKAnnotationView+WebCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MKAnnotationView+WebCache.h"; sourceTree = "<group>"; };
 		26A49A35179AD7E20038D4AF /* MKAnnotationView+WebCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MKAnnotationView+WebCache.m"; sourceTree = "<group>"; };
 		26A49A36179AD7E20038D4AF /* NSData+GIF.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+GIF.h"; sourceTree = "<group>"; };
@@ -392,6 +412,21 @@
 			path = WBNoticeView;
 			sourceTree = "<group>";
 		};
+		26A31EEB179D63FE008AE896 /* MMDrawerController */ = {
+			isa = PBXGroup;
+			children = (
+				26A31EEC179D63FE008AE896 /* MMDrawerBarButtonItem.h */,
+				26A31EED179D63FE008AE896 /* MMDrawerBarButtonItem.m */,
+				26A31EEE179D63FE008AE896 /* MMDrawerController.h */,
+				26A31EEF179D63FE008AE896 /* MMDrawerController.m */,
+				26A31EF0179D63FE008AE896 /* MMDrawerVisualState.h */,
+				26A31EF1179D63FE008AE896 /* MMDrawerVisualState.m */,
+				26A31EF2179D63FE008AE896 /* UIViewController+MMDrawerController.h */,
+				26A31EF3179D63FE008AE896 /* UIViewController+MMDrawerController.m */,
+			);
+			path = MMDrawerController;
+			sourceTree = "<group>";
+		};
 		26A49A33179AD7E20038D4AF /* SDWebImage */ = {
 			isa = PBXGroup;
 			children = (
@@ -499,6 +534,7 @@
 		26AE40DB1790F39900A1EDEC /* TPLibrary */ = {
 			isa = PBXGroup;
 			children = (
+				26A31EEB179D63FE008AE896 /* MMDrawerController */,
 				26A49A33179AD7E20038D4AF /* SDWebImage */,
 				26A200F2179981ED00A7D3D1 /* WBNoticeView */,
 				26B479C01792823100231C18 /* Core */,
@@ -770,6 +806,10 @@
 				26A49A5C179AD7E20038D4AF /* UIImage+MultiFormat.m in Sources */,
 				26A49A5D179AD7E20038D4AF /* UIImage+WebP.m in Sources */,
 				26A49A5E179AD7E20038D4AF /* UIImageView+WebCache.m in Sources */,
+				26A31EF4179D63FE008AE896 /* MMDrawerBarButtonItem.m in Sources */,
+				26A31EF5179D63FE008AE896 /* MMDrawerController.m in Sources */,
+				26A31EF6179D63FE008AE896 /* MMDrawerVisualState.m in Sources */,
+				26A31EF7179D63FE008AE896 /* UIViewController+MMDrawerController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
