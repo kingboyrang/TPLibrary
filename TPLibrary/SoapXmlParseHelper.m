@@ -35,9 +35,12 @@
             }
             result=[[result objectAtIndex:0] children];
         }
+        if ([MsgResult length]==0) {
+            return (NSString*)data;
+        }
         return MsgResult;
     }
-    return @"";
+    return (NSString*)data;
 }
 #pragma mark -
 #pragma mark 将xml转换成数组
