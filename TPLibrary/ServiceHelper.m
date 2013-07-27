@@ -121,6 +121,13 @@
     //处理返回的结果
     return [self soapMessageResult:self.httpRequest];
 }
+-(NSString*)syncServiceMethodName:(NSString*)methodName{
+    return [self syncServiceMethodName:methodName error:nil];
+}
+-(NSString*)syncServiceMethodName:(NSString*)methodName error:(NSError**)error{
+    ServiceArgs *args=[ServiceArgs serviceMethodName:methodName];
+   return  [self syncService:args error:error];
+}
 +(NSString*)syncService:(ServiceArgs*)args
 {
     return [ServiceHelper syncService:args error:nil];
@@ -187,6 +194,17 @@
          _failedBlock=Block_copy(failed);
     
     [self asynService:args];
+}
+-(void)asynServiceMethodName:(NSString*)methodName delegate:(id<ServiceHelperDelegate>)theDelegate{
+    ServiceArgs *args=[ServiceArgs serviceMethodName:methodName];
+    [self asynService:args delegate:theDelegate];
+}
+-(void)asynServiceMethodName:(NSString*)methodName completed:(finishBlockRequest)finish failed:(failedBlockRequest)failed{
+    [self asynServiceMethodName:methodName progress:nil completed:finish failed:failed];
+}
+-(void)asynServiceMethodName:(NSString*)methodName progress:(progressRequestBlock)progress completed:(finishBlockRequest)finish failed:(failedBlockRequest)failed{
+    ServiceArgs *args=[ServiceArgs serviceMethodName:methodName];
+    [self asynService:args progress:progress completed:finish failed:failed];
 }
 +(void)asynService:(ServiceArgs*)args delegate:(id<ServiceHelperDelegate>)theDelegate
 {

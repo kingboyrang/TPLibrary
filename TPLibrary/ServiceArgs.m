@@ -100,10 +100,17 @@ static NSString *defaultWebServiceNameSpace=@"http://60.251.51.217/ELandMC.Admin
     NSString *body=[NSString stringWithFormat:@"<%@ xmlns=\"%@\" />",[self methodName],[self serviceNameSpace]];
     return [NSString stringWithFormat:[self defaultSoapMesage],body];
 }
++(ServiceArgs*)serviceMethodName:(NSString*)methodName{
+    return [self serviceMethodName:methodName soapMessage:nil];
+}
 +(ServiceArgs*)serviceMethodName:(NSString*)name soapMessage:(NSString*)msg{
     ServiceArgs *args=[[[ServiceArgs alloc] init] autorelease];
     args.methodName=name;
-    args.soapMessage=msg;
+    if (msg&&[msg length]>0) {
+        args.soapMessage=msg;
+    }else{
+        args.soapMessage=[args stringSoapMessage:nil];
+    }
     return args;
 }
 @end

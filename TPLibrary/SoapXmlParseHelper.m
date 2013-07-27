@@ -30,7 +30,7 @@
         while ([result count]>0) {
             NSString *nodeName=[[result objectAtIndex:0] name];
             if ([nodeName isEqualToString: searchStr]) {
-                MsgResult=[[result objectAtIndex:0] stringValue];
+                MsgResult=[[result objectAtIndex:0] XMLString];
                 break;
             }
             result=[[result objectAtIndex:0] children];

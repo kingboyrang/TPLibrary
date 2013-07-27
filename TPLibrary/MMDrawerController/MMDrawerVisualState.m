@@ -38,7 +38,7 @@
             sideDrawerViewController = drawerController.leftDrawerViewController;
             translateTransform = CATransform3DMakeTranslation((maxDistance-distance), 0.0, 0.0);
         }
-        else if(drawerSide == MMDrawerSideRight){
+        else {
             sideDrawerViewController = drawerController.rightDrawerViewController;
             translateTransform = CATransform3DMakeTranslation(-(maxDistance-distance), 0.0, 0.0);
         }
@@ -130,7 +130,7 @@
                 transform = CATransform3DTranslate(transform, drawerController.maximumLeftDrawerWidth*(percentVisible-1.f)/2, 0.f, 0.f);
             }
         }
-        else if(drawerSide == MMDrawerSideRight){
+        else {
             sideDrawerViewController = drawerController.rightDrawerViewController;
             CGFloat distance = MAX(drawerController.maximumRightDrawerWidth,drawerController.visibleRightDrawerWidth);
             if(percentVisible <= 1.f){

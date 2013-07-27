@@ -19,7 +19,8 @@
 @property(nonatomic,readonly) NSString *defaultSoapMesage;
 @property(nonatomic,retain) NSArray *soapParams;
 -(NSString*)stringSoapMessage:(NSArray*)params;
-+(ServiceArgs*)serviceMethodName:(NSString*)name soapMessage:(NSString*)msg;
++(ServiceArgs*)serviceMethodName:(NSString*)methodName;
++(ServiceArgs*)serviceMethodName:(NSString*)methodName soapMessage:(NSString*)soapMsg;
 //webservice访问设置
 +(void)setNameSapce:(NSString*)space;
 +(void)setWebServiceURL:(NSString*)url;

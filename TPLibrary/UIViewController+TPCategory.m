@@ -28,6 +28,12 @@
     }
     return self.view.bounds.size;
 }
+-(CGFloat)screenWith{
+    return [self viewSize].width;
+}
+-(CGFloat)screenHeight{
+  return [self viewSize].height;
+}
 -(BOOL)isIPAD{
     return [UIDevice isIPad];
 }
@@ -47,30 +53,19 @@
     [notice show];
 }
 -(void)showErrorNetWorkConnection{
-    if (![self hasNetWork]) {
-        [self showErrorNoticeInView:self.view title:@"Network Error" message:@"Check your network connection." dismissError:nil];
-    }
+     [self showErrorNoticeInView:self.view title:@"Network Error" message:@"Check your network connection." dismissError:nil];
 }
 -(void)showErrorNetWorkConnection:(UIView*)view title:(NSString*)title message:(NSString*)message dismissError:(void (^)(void))dismiss
 {
-    if (![self hasNetWork]) {
-        [self showErrorNoticeInView:view title:title message:message dismissError:dismiss];
-    }
+   [self showErrorNoticeInView:view title:title message:message dismissError:dismiss];
 }
--(void)showListenerNewWork{
-    NetWorkConnection *network=[NetWorkConnection sharedInstance];
-    [network dynamicListenerNetwork:^(NetworkStatus status, BOOL isConnection) {
-        if (!isConnection) {
-            [self showErrorNoticeInView:self.view title:@"Network Error" message:@"Check your network connection." dismissError:nil];
-        }
-    }];
+-(void)listenerNetwork{
+    [self listenerNetwork:self.view title:@"Network Error" message:@"Check your network connection." dismissError:nil];
 }
--(void)showListenerNewWork:(UIView*)view title:(NSString*)title message:(NSString*)message dismissError:(void (^)(void))dismiss
-{
-    NetWorkConnection *network=[NetWorkConnection sharedInstance];
-    [network dynamicListenerNetwork:^(NetworkStatus status, BOOL isConnection) {
+-(void)listenerNetwork:(UIView*)view title:(NSString*)title message:(NSString*)message dismissError:(void (^)(void))dismiss{
+    [[NetWorkConnection sharedInstance] dynamicListenerNetwork:^(NetworkStatus status, BOOL isConnection) {
         if (!isConnection) {
-            [self showErrorNoticeInView:view title:title message:message dismissError:dismiss];
+            [self showErrorNetWorkConnection:view title:title message:message dismissError:dismiss];
         }
     }];
 }
