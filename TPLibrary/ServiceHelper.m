@@ -8,11 +8,9 @@
 
 #import "ServiceHelper.h"
 #import "SoapXmlParseHelper.h"
-
 @interface ServiceHelper()
 //重设队列
 -(void)resetQueue;
-/********对于返回soap信息的处理**********/
 -(NSString*)soapMessageResult:(ASIHTTPRequest*)request;
 @end
 
@@ -223,13 +221,13 @@
 #pragma mark ASIHTTPRequest delegate Methods
 - (void)requestFinished:(ASIHTTPRequest *)request
 {
-    NSString *result=[self soapMessageResult:request];
-    if (self.delegate&&[self.delegate respondsToSelector:@selector(finishSoapRequest:userInfo:)]) {
-        [self.delegate finishSoapRequest:result userInfo:[request userInfo]];
+    ServiceResult *result=[ServiceResult requestResult:request];
+    if (self.delegate&&[self.delegate respondsToSelector:@selector(finishSoapRequest:)]) {
+        [self.delegate finishSoapRequest:result];
     }
 
 	if(_finishBlock){
-        _finishBlock(result,nil);
+        _finishBlock(result);
     }
 }
 - (void)requestFailed:(ASIHTTPRequest *)request
@@ -284,12 +282,12 @@
 }
 -(void)requestFetchComplete:(ASIHTTPRequest*)request{
    
-	NSString *result=[self soapMessageResult:request];
-    if (self.delegate&&[self.delegate respondsToSelector:@selector(finishSoapRequest:userInfo:)]) {
-        [self.delegate finishSoapRequest:result userInfo:[request userInfo]];
+	ServiceResult *result=[ServiceResult requestResult:request];
+    if (self.delegate&&[self.delegate respondsToSelector:@selector(finishSoapRequest:)]) {
+        [self.delegate finishSoapRequest:result];
     }
     if (_finishBlock) {
-        _finishBlock(result,[request userInfo]);
+        _finishBlock(result);
     }
     
 }

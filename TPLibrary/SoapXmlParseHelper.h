@@ -18,6 +18,7 @@
    @return 返回节点内容
  ***/
 +(NSString*)soapMessageResultXml:(id)xml serviceMethodName:(NSString*)methodName;
++(NSString*)soapMessageResultXml:(id)xml serviceMethodName:(NSString*)methodName xmlData:(NSString**)result;
 /******************************xml转换成数组处理***********************************************/
 /*****xml转换成Array
    @param xml:NSData或NSString

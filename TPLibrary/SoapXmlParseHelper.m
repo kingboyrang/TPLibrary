@@ -20,6 +20,26 @@
 @implementation SoapXmlParseHelper
 #pragma mark -
 #pragma mark 获取methodName+Result里面的内容
++(NSString*)soapMessageResultXml:(id)data serviceMethodName:(NSString*)methodName xmlData:(NSString**)content{
+    GDataXMLDocument *document=[self xmlDocumentObject:data nodeName:nil];
+    if (document) {
+        GDataXMLElement* rootNode = [document rootElement];
+        NSString *searchStr=[NSString stringWithFormat:@"%@Result",methodName];
+        NSString *MsgResult=@"";
+        NSArray *result=[rootNode children];
+        while ([result count]>0) {
+            NSString *nodeName=[[result objectAtIndex:0] name];
+            if ([nodeName isEqualToString: searchStr]) {
+                MsgResult=[[result objectAtIndex:0] XMLString];
+                *content=[[result objectAtIndex:0] stringValue];
+                break;
+            }
+            result=[[result objectAtIndex:0] children];
+        }
+        return MsgResult;
+    }
+    return @"";
+}
 +(NSString*)soapMessageResultXml:(id)data serviceMethodName:(NSString*)methodName{
     GDataXMLDocument *document=[self xmlDocumentObject:data nodeName:nil];
     if (document) {

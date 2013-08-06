@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		26A19C2E17B12DF50049F221 /* ServiceResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 26A19C2D17B12DF50049F221 /* ServiceResult.m */; };
 		26A200EC17997D0700A7D3D1 /* UIViewController+TPCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 26A200EB17997D0700A7D3D1 /* UIViewController+TPCategory.m */; };
 		26A20109179981ED00A7D3D1 /* NSOperationQueue+WBNoticeExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 26A200F5179981ED00A7D3D1 /* NSOperationQueue+WBNoticeExtensions.m */; };
 		26A2010A179981ED00A7D3D1 /* UILabel+WBExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 26A200F7179981ED00A7D3D1 /* UILabel+WBExtensions.m */; };
@@ -221,6 +222,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		26A19C2C17B12DF50049F221 /* ServiceResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ServiceResult.h; sourceTree = "<group>"; };
+		26A19C2D17B12DF50049F221 /* ServiceResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ServiceResult.m; sourceTree = "<group>"; };
 		26A200EA17997D0700A7D3D1 /* UIViewController+TPCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+TPCategory.h"; sourceTree = "<group>"; };
 		26A200EB17997D0700A7D3D1 /* UIViewController+TPCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+TPCategory.m"; sourceTree = "<group>"; };
 		26A200F3179981ED00A7D3D1 /* NoticeView.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = NoticeView.bundle; sourceTree = "<group>"; };
@@ -609,6 +612,8 @@
 				26B479C41792825100231C18 /* ServiceHelper.m */,
 				26B479C51792825100231C18 /* ServiceArgs.h */,
 				26B479C61792825100231C18 /* ServiceArgs.m */,
+				26A19C2C17B12DF50049F221 /* ServiceResult.h */,
+				26A19C2D17B12DF50049F221 /* ServiceResult.m */,
 			);
 			name = WebService;
 			sourceTree = "<group>";
@@ -810,6 +815,7 @@
 				26A31EF5179D63FE008AE896 /* MMDrawerController.m in Sources */,
 				26A31EF6179D63FE008AE896 /* MMDrawerVisualState.m in Sources */,
 				26A31EF7179D63FE008AE896 /* UIViewController+MMDrawerController.m in Sources */,
+				26A19C2E17B12DF50049F221 /* ServiceResult.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

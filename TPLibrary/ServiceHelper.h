@@ -10,16 +10,17 @@
 #import "ASINetworkQueue.h"
 #import "ASIHTTPRequest.h"
 #import "ServiceArgs.h"
+#import "ServiceResult.h"
 //block
 typedef void (^progressRequestBlock)(ASIHTTPRequest *request);
-typedef void (^finishBlockRequest)(NSString *xml,NSDictionary *userInfo);
+typedef void (^finishBlockRequest)(ServiceResult *result);
 typedef void (^failedBlockRequest)(NSError *error,NSDictionary *userInfo);
 typedef void (^finishBlockQueueComplete)();
 //protocol
 @protocol ServiceHelperDelegate<NSObject>
 @optional
 -(void)progressRequest:(ASIHTTPRequest*)request;
--(void)finishSoapRequest:(NSString*)xml userInfo:(NSDictionary*)dic;
+-(void)finishSoapRequest:(ServiceResult*)result;
 -(void)failedSoapRequest:(NSError*)error userInfo:(NSDictionary*)dic;
 -(void)finishQueueComplete;
 @end
