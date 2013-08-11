@@ -7,18 +7,16 @@
 //
 
 #import "ServiceResult.h"
-#import "SoapXmlParseHelper.h"
 @implementation ServiceResult
 @synthesize request,userInfo;
-@synthesize soapMessage;
-@synthesize sourceData,xmlValue,xmlString;
+@synthesize xmlParse;
+@synthesize xmlValue,xmlString;
 +(id)requestResult:(ASIHTTPRequest*)httpRequest{
     ServiceResult *entity=[[ServiceResult alloc] init];
     entity.request=httpRequest;
     entity.userInfo=[httpRequest userInfo];
-    entity.soapMessage=[httpRequest responseString];
-    
-    NSString *temp=entity.soapMessage;
+    //entity.xmlString=[httpRequest responseString];
+    NSString *temp=[httpRequest responseString];
     int statusCode = [httpRequest responseStatusCode];
     NSError *error=[httpRequest error];
     //如果发生错误，就返回空
@@ -32,12 +30,11 @@
         int pos=range.location;
         methodName=[soapAction stringByReplacingCharactersInRange:NSMakeRange(0, pos+1) withString:@""];
     }
-    NSString *content=nil;
-    entity.xmlString=[SoapXmlParseHelper soapMessageResultXml:entity.soapMessage serviceMethodName:methodName xmlData:&content];
-    entity.xmlValue=content;
-    if ([entity.xmlString length]>0) {
-        entity.sourceData=[SoapXmlParseHelper xmlToArray:entity.xmlString];
-    }
+    entity.xmlString=temp;
+    XmlParseHelper *_helper=[[[XmlParseHelper alloc] initWithData:temp] autorelease];
+    entity.xmlParse=_helper;
+    entity.xmlValue=[_helper soapMessageResultXml:methodName];
+  
     return [entity autorelease];
 }
 @end

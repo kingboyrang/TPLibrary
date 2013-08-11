@@ -12,8 +12,8 @@
 -(NSString*)paramsFormatString:(NSArray*)params;
 @end
 
-static NSString *defaultWebServiceUrl=@"http://60.251.51.217/ElandMC.admin1206/WebServices/webservice.asmx";
-static NSString *defaultWebServiceNameSpace=@"http://60.251.51.217/ELandMC.Admin1206/WebServices/";
+static NSString *defaultWebServiceUrl=@"http://webservice.webxml.com.cn/WebServices/ForexRmbRateWebService.asmx";
+static NSString *defaultWebServiceNameSpace=@"http://webxml.com.cn/";
 
 @implementation ServiceArgs
 @synthesize serviceURL,serviceNameSpace;

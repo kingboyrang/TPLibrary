@@ -7,11 +7,9 @@
 //
 
 #import "ServiceHelper.h"
-#import "SoapXmlParseHelper.h"
 @interface ServiceHelper()
 //重设队列
 -(void)resetQueue;
--(NSString*)soapMessageResult:(ASIHTTPRequest*)request;
 @end
 
 @implementation ServiceHelper
@@ -85,10 +83,10 @@
 }
 #pragma mark -
 #pragma mark 同步请求
--(NSString*)syncService:(ServiceArgs*)args{
+-(ServiceResult*)syncService:(ServiceArgs*)args{
     return [self syncService:args error:nil];
 }
--(NSString*)syncService:(ServiceArgs*)args error:(NSError**)error
+-(ServiceResult*)syncService:(ServiceArgs*)args error:(NSError**)error
 {
     [self.httpRequest clearDelegatesAndCancel];
     
@@ -115,25 +113,34 @@
      ***/
     //设置同步
     [self.httpRequest startSynchronous];
-    *error=[self.httpRequest error];
+    if (error) {
+        *error=[self.httpRequest error];
+    }
     //处理返回的结果
-    return [self soapMessageResult:self.httpRequest];
+    return [ServiceResult requestResult:self.httpRequest];
 }
--(NSString*)syncServiceMethodName:(NSString*)methodName{
+-(ServiceResult*)syncServiceMethodName:(NSString*)methodName{
     return [self syncServiceMethodName:methodName error:nil];
 }
--(NSString*)syncServiceMethodName:(NSString*)methodName error:(NSError**)error{
+-(ServiceResult*)syncServiceMethodName:(NSString*)methodName error:(NSError**)error{
     ServiceArgs *args=[ServiceArgs serviceMethodName:methodName];
    return  [self syncService:args error:error];
 }
-+(NSString*)syncService:(ServiceArgs*)args
++(ServiceResult*)syncService:(ServiceArgs*)args
 {
     return [ServiceHelper syncService:args error:nil];
 }
-+(NSString*)syncService:(ServiceArgs*)args error:(NSError**)error
++(ServiceResult*)syncService:(ServiceArgs*)args error:(NSError**)error
 {
     ServiceHelper *helper=[ServiceHelper sharedInstance];
     return [helper syncService:args error:error];
+}
++(ServiceResult*)syncMethodName:(NSString*)methodName{
+    return [self syncMethodName:methodName error:nil];
+}
++(ServiceResult*)syncMethodName:(NSString*)methodName error:(NSError**)error{
+    ServiceHelper *helper=[ServiceHelper sharedInstance];
+    return [helper syncServiceMethodName:methodName error:error];
 }
 #pragma mark -
 #pragma mark 异步请求
@@ -217,6 +224,18 @@
     ServiceHelper *helper=[ServiceHelper sharedInstance];
     [helper asynService:args progress:progress completed:finish failed:failed];
 }
++(void)asynMethodName:(NSString*)methodName delegate:(id<ServiceHelperDelegate>)theDelegate{
+      ServiceHelper *helper=[ServiceHelper sharedInstance];
+      [helper asynServiceMethodName:methodName delegate:theDelegate];
+}
++(void)asynMethodName:(NSString*)methodName completed:(finishBlockRequest)finish failed:(failedBlockRequest)failed{
+    [self asynMethodName:methodName progress:nil completed:finish failed:failed];
+}
++(void)asynMethodName:(NSString*)methodName progress:(progressRequestBlock)progress completed:(finishBlockRequest)finish failed:(failedBlockRequest)failed{
+     ServiceHelper *helper=[ServiceHelper sharedInstance];
+     ServiceArgs *args=[ServiceArgs serviceMethodName:methodName];
+    [helper asynService:args progress:progress completed:finish failed:failed];
+}
 #pragma mark -
 #pragma mark ASIHTTPRequest delegate Methods
 - (void)requestFinished:(ASIHTTPRequest *)request
@@ -271,6 +290,13 @@
     [self.requestList addObject:request];
     
 }
+-(void)addRangeQueue:(NSArray*)requests{
+    if (!self.requestList) {
+        self.requestList=[[NSMutableArray alloc] init];
+    }
+    [self.requestList removeAllObjects];
+    self.requestList=[NSMutableArray arrayWithArray:requests];
+}
 //队列请求处理
 -(void)queueFetchComplete:(ASIHTTPRequest*)request{
     if(self.delegate&&[self.delegate respondsToSelector:@selector(finishQueueComplete)]){
@@ -278,6 +304,9 @@
     }    
     if (_finishQueueBlock) {
         _finishQueueBlock();
+    }
+    if (self.requestList) {
+        [self.requestList removeAllObjects];
     }
 }
 -(void)requestFetchComplete:(ASIHTTPRequest*)request{
@@ -316,29 +345,6 @@
     
     [self startQueue];
 
-}
-#pragma mark -
-#pragma mark 对于返回soap信息的处理
-/********对于返回soap信息的处理**********/
--(NSString*)soapMessageResult:(ASIHTTPRequest*)request{
-    int statusCode = [request responseStatusCode];
-    NSError *error=[request error];
-    //如果发生错误，就返回空
-    if (error||statusCode!=200) {
-        return @"";
-    }
-	NSString *soapAction=[[request requestHeaders] objectForKey:@"SOAPAction"];
-    NSString *methodName=@"";
-    NSRange range = [soapAction  rangeOfString:@"/" options:NSBackwardsSearch];
-    if(range.location!=NSNotFound){
-        int pos=range.location;
-        methodName=[soapAction stringByReplacingCharactersInRange:NSMakeRange(0, pos+1) withString:@""];
-    }
-	// Use when fetching text data
-	NSString *responseString = [request responseString];
-	NSString *result=[SoapXmlParseHelper soapMessageResultXml:responseString serviceMethodName:methodName];
-
-    return result;
 }
 -(void)dealloc{
     Block_release(_failedBlock);

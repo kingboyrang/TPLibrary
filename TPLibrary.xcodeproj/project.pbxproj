@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		26A19C2E17B12DF50049F221 /* ServiceResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 26A19C2D17B12DF50049F221 /* ServiceResult.m */; };
 		26A200EC17997D0700A7D3D1 /* UIViewController+TPCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 26A200EB17997D0700A7D3D1 /* UIViewController+TPCategory.m */; };
 		26A20109179981ED00A7D3D1 /* NSOperationQueue+WBNoticeExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 26A200F5179981ED00A7D3D1 /* NSOperationQueue+WBNoticeExtensions.m */; };
 		26A2010A179981ED00A7D3D1 /* UILabel+WBExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 26A200F7179981ED00A7D3D1 /* UILabel+WBExtensions.m */; };
@@ -70,6 +69,20 @@
 		26A49A8A179AE6680038D4AF /* WBGrayGradientView.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 26A200FC179981ED00A7D3D1 /* WBGrayGradientView.h */; };
 		26A49A8B179AE66F0038D4AF /* WBNoticeView+ForSubclassEyesOnly.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 26A20100179981ED00A7D3D1 /* WBNoticeView+ForSubclassEyesOnly.h */; };
 		26A49A8C179AE6760038D4AF /* WBRedGradientView.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 26A20103179981ED00A7D3D1 /* WBRedGradientView.h */; };
+		26A5131217B7819300ED5299 /* ServiceHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 26A5130D17B7819300ED5299 /* ServiceHelper.m */; };
+		26A5131317B7819300ED5299 /* ServiceArgs.m in Sources */ = {isa = PBXBuildFile; fileRef = 26A5130F17B7819300ED5299 /* ServiceArgs.m */; };
+		26A5131417B7819300ED5299 /* ServiceResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 26A5131117B7819300ED5299 /* ServiceResult.m */; };
+		26A5131D17B781B200ED5299 /* XmlParseHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 26A5131617B781B200ED5299 /* XmlParseHelper.m */; };
+		26A5131E17B781B200ED5299 /* XmlNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 26A5131817B781B200ED5299 /* XmlNode.m */; };
+		26A5131F17B781B200ED5299 /* GDataXMLNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 26A5131C17B781B200ED5299 /* GDataXMLNode.m */; };
+		26A5132017B781D100ED5299 /* ServiceHelper.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 26A5130C17B7819300ED5299 /* ServiceHelper.h */; };
+		26A5132117B781DD00ED5299 /* XmlParseHelper.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 26A5131517B781B200ED5299 /* XmlParseHelper.h */; };
+		26A5132217B781E500ED5299 /* ServiceArgs.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 26A5130E17B7819300ED5299 /* ServiceArgs.h */; };
+		26A5132317B781EE00ED5299 /* ServiceResult.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 26A5131017B7819300ED5299 /* ServiceResult.h */; };
+		26A5132417B781F500ED5299 /* XmlNode.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 26A5131717B781B200ED5299 /* XmlNode.h */; };
+		26A5132517B781FE00ED5299 /* GDataTargetNamespace.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 26A5131917B781B200ED5299 /* GDataTargetNamespace.h */; };
+		26A5132617B7820B00ED5299 /* GDataDefines.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 26A5131A17B781B200ED5299 /* GDataDefines.h */; };
+		26A5132717B7821200ED5299 /* GDataXMLNode.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 26A5131B17B781B200ED5299 /* GDataXMLNode.h */; };
 		26AE40DA1790F39900A1EDEC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26AE40D91790F39900A1EDEC /* Foundation.framework */; };
 		26AE40DF1790F39900A1EDEC /* TPLibrary.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 26AE40DE1790F39900A1EDEC /* TPLibrary.h */; };
 		26AE40E11790F39900A1EDEC /* TPLibrary.m in Sources */ = {isa = PBXBuildFile; fileRef = 26AE40E01790F39900A1EDEC /* TPLibrary.m */; };
@@ -84,8 +97,6 @@
 		26AE41051790FE9D00A1EDEC /* NSData+TPCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 26AE41041790FE9D00A1EDEC /* NSData+TPCategory.m */; };
 		26AE41081791001500A1EDEC /* NSDictionary+TPCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 26AE41071791001500A1EDEC /* NSDictionary+TPCategory.m */; };
 		26AE412D1791218100A1EDEC /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26AE412C1791218100A1EDEC /* QuartzCore.framework */; };
-		26B479C71792825100231C18 /* ServiceHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 26B479C41792825100231C18 /* ServiceHelper.m */; };
-		26B479C81792825100231C18 /* ServiceArgs.m in Sources */ = {isa = PBXBuildFile; fileRef = 26B479C61792825100231C18 /* ServiceArgs.m */; };
 		26B479CE1792830500231C18 /* DownloadManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 26B479CB1792830500231C18 /* DownloadManager.m */; };
 		26B479CF1792830500231C18 /* DownLoadArgs.m in Sources */ = {isa = PBXBuildFile; fileRef = 26B479CD1792830500231C18 /* DownLoadArgs.m */; };
 		26B479D6179283C900231C18 /* SVGeocoder.m in Sources */ = {isa = PBXBuildFile; fileRef = 26B479D3179283C900231C18 /* SVGeocoder.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
@@ -99,8 +110,6 @@
 		26B47A0017929B4500231C18 /* SVPlacemark.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 26B479D4179283C900231C18 /* SVPlacemark.h */; };
 		26B47A0117929B4A00231C18 /* DownloadManager.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 26B479CA1792830500231C18 /* DownloadManager.h */; };
 		26B47A0217929B5100231C18 /* DownLoadArgs.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 26B479CC1792830500231C18 /* DownLoadArgs.h */; };
-		26B47A0317929B5500231C18 /* ServiceHelper.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 26B479C31792825100231C18 /* ServiceHelper.h */; };
-		26B47A0417929B5A00231C18 /* ServiceArgs.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 26B479C51792825100231C18 /* ServiceArgs.h */; };
 		26B47A0517929B6000231C18 /* Reachability.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 26B7A3281791A77D002BB336 /* Reachability.h */; };
 		26B47A0617929B6600231C18 /* ASIDownloadCache.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 26B7A3061791A705002BB336 /* ASIDownloadCache.h */; };
 		26B47A0717929B6B00231C18 /* ASINetworkQueue.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 26B7A3081791A705002BB336 /* ASINetworkQueue.h */; };
@@ -110,13 +119,9 @@
 		26B47A0B17929B8E00231C18 /* ASIAuthenticationDialog.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 26B7A3101791A705002BB336 /* ASIAuthenticationDialog.h */; };
 		26B47A0C17929B9500231C18 /* ASICacheDelegate.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 26B7A3121791A705002BB336 /* ASICacheDelegate.h */; };
 		26B47A0D17929B9A00231C18 /* ASIProgressDelegate.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 26B7A3131791A705002BB336 /* ASIProgressDelegate.h */; };
-		26B47A0E17929BA000231C18 /* SoapXmlParseHelper.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 26B7A2FF1791A66F002BB336 /* SoapXmlParseHelper.h */; };
 		26B47A0F17929BA500231C18 /* ASIHTTPRequest.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 26B7A3161791A705002BB336 /* ASIHTTPRequest.h */; };
 		26B47A1017929BAB00231C18 /* ASIHTTPRequestDelegate.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 26B7A3141791A705002BB336 /* ASIHTTPRequestDelegate.h */; };
 		26B47A1117929BB100231C18 /* ASIHTTPRequestConfig.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 26B7A3151791A705002BB336 /* ASIHTTPRequestConfig.h */; };
-		26B47A1217929BB600231C18 /* GDataXMLNode.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 26B7A2FB1791A66F002BB336 /* GDataXMLNode.h */; };
-		26B47A1317929BBD00231C18 /* GDataDefines.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 26B7A2FD1791A66F002BB336 /* GDataDefines.h */; };
-		26B47A1417929BC400231C18 /* GDataTargetNamespace.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 26B7A2FE1791A66F002BB336 /* GDataTargetNamespace.h */; };
 		26B47A1717929BE600231C18 /* NSString+TPCategory.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 26AE40E81790F3CF00A1EDEC /* NSString+TPCategory.h */; };
 		26B47A1817929BED00231C18 /* NSDate+TPCategory.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 26AE40ED1790F49E00A1EDEC /* NSDate+TPCategory.h */; };
 		26B47A1917929BF400231C18 /* UIColor+TPCategory.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 26AE40F01790F52F00A1EDEC /* UIColor+TPCategory.h */; };
@@ -127,8 +132,6 @@
 		26B47A1E17929C1600231C18 /* NSData+TPCategory.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 26AE41031790FE9D00A1EDEC /* NSData+TPCategory.h */; };
 		26B47A1F17929C1C00231C18 /* NSDictionary+TPCategory.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 26AE41061791001500A1EDEC /* NSDictionary+TPCategory.h */; };
 		26B7A2F51791A5C9002BB336 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26B7A2F41791A5C9002BB336 /* CoreGraphics.framework */; };
-		26B7A3011791A66F002BB336 /* GDataXMLNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 26B7A2FC1791A66F002BB336 /* GDataXMLNode.m */; };
-		26B7A3021791A66F002BB336 /* SoapXmlParseHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 26B7A3001791A66F002BB336 /* SoapXmlParseHelper.m */; };
 		26B7A3041791A6AB002BB336 /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 26B7A3031791A6AB002BB336 /* libxml2.dylib */; };
 		26B7A3181791A705002BB336 /* ASIDownloadCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 26B7A3071791A705002BB336 /* ASIDownloadCache.m */; };
 		26B7A3191791A705002BB336 /* ASINetworkQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 26B7A3091791A705002BB336 /* ASINetworkQueue.m */; };
@@ -151,6 +154,14 @@
 			dstPath = "include/${PRODUCT_NAME}";
 			dstSubfolderSpec = 16;
 			files = (
+				26A5132717B7821200ED5299 /* GDataXMLNode.h in CopyFiles */,
+				26A5132617B7820B00ED5299 /* GDataDefines.h in CopyFiles */,
+				26A5132517B781FE00ED5299 /* GDataTargetNamespace.h in CopyFiles */,
+				26A5132417B781F500ED5299 /* XmlNode.h in CopyFiles */,
+				26A5132317B781EE00ED5299 /* ServiceResult.h in CopyFiles */,
+				26A5132217B781E500ED5299 /* ServiceArgs.h in CopyFiles */,
+				26A5132117B781DD00ED5299 /* XmlParseHelper.h in CopyFiles */,
+				26A5132017B781D100ED5299 /* ServiceHelper.h in CopyFiles */,
 				26A31EFC179D64F8008AE896 /* UIViewController+MMDrawerController.h in CopyFiles */,
 				26A31EFB179D64F3008AE896 /* MMDrawerVisualState.h in CopyFiles */,
 				26A31EFA179D64EE008AE896 /* MMDrawerController.h in CopyFiles */,
@@ -191,13 +202,9 @@
 				26B47A1917929BF400231C18 /* UIColor+TPCategory.h in CopyFiles */,
 				26B47A1817929BED00231C18 /* NSDate+TPCategory.h in CopyFiles */,
 				26B47A1717929BE600231C18 /* NSString+TPCategory.h in CopyFiles */,
-				26B47A1417929BC400231C18 /* GDataTargetNamespace.h in CopyFiles */,
-				26B47A1317929BBD00231C18 /* GDataDefines.h in CopyFiles */,
-				26B47A1217929BB600231C18 /* GDataXMLNode.h in CopyFiles */,
 				26B47A1117929BB100231C18 /* ASIHTTPRequestConfig.h in CopyFiles */,
 				26B47A1017929BAB00231C18 /* ASIHTTPRequestDelegate.h in CopyFiles */,
 				26B47A0F17929BA500231C18 /* ASIHTTPRequest.h in CopyFiles */,
-				26B47A0E17929BA000231C18 /* SoapXmlParseHelper.h in CopyFiles */,
 				26B47A0D17929B9A00231C18 /* ASIProgressDelegate.h in CopyFiles */,
 				26B47A0C17929B9500231C18 /* ASICacheDelegate.h in CopyFiles */,
 				26B47A0B17929B8E00231C18 /* ASIAuthenticationDialog.h in CopyFiles */,
@@ -207,8 +214,6 @@
 				26B47A0717929B6B00231C18 /* ASINetworkQueue.h in CopyFiles */,
 				26B47A0617929B6600231C18 /* ASIDownloadCache.h in CopyFiles */,
 				26B47A0517929B6000231C18 /* Reachability.h in CopyFiles */,
-				26B47A0417929B5A00231C18 /* ServiceArgs.h in CopyFiles */,
-				26B47A0317929B5500231C18 /* ServiceHelper.h in CopyFiles */,
 				26B47A0217929B5100231C18 /* DownLoadArgs.h in CopyFiles */,
 				26B47A0117929B4A00231C18 /* DownloadManager.h in CopyFiles */,
 				26B47A0017929B4500231C18 /* SVPlacemark.h in CopyFiles */,
@@ -222,8 +227,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		26A19C2C17B12DF50049F221 /* ServiceResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ServiceResult.h; sourceTree = "<group>"; };
-		26A19C2D17B12DF50049F221 /* ServiceResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ServiceResult.m; sourceTree = "<group>"; };
 		26A200EA17997D0700A7D3D1 /* UIViewController+TPCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+TPCategory.h"; sourceTree = "<group>"; };
 		26A200EB17997D0700A7D3D1 /* UIViewController+TPCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+TPCategory.m"; sourceTree = "<group>"; };
 		26A200F3179981ED00A7D3D1 /* NoticeView.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = NoticeView.bundle; sourceTree = "<group>"; };
@@ -287,6 +290,20 @@
 		26A49A50179AD7E20038D4AF /* UIImageView+WebCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+WebCache.m"; sourceTree = "<group>"; };
 		26A49A7B179AE18F0038D4AF /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
 		26A49A7D179AE19B0038D4AF /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		26A5130C17B7819300ED5299 /* ServiceHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ServiceHelper.h; sourceTree = "<group>"; };
+		26A5130D17B7819300ED5299 /* ServiceHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ServiceHelper.m; sourceTree = "<group>"; };
+		26A5130E17B7819300ED5299 /* ServiceArgs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ServiceArgs.h; sourceTree = "<group>"; };
+		26A5130F17B7819300ED5299 /* ServiceArgs.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ServiceArgs.m; sourceTree = "<group>"; };
+		26A5131017B7819300ED5299 /* ServiceResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ServiceResult.h; sourceTree = "<group>"; };
+		26A5131117B7819300ED5299 /* ServiceResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ServiceResult.m; sourceTree = "<group>"; };
+		26A5131517B781B200ED5299 /* XmlParseHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XmlParseHelper.h; sourceTree = "<group>"; };
+		26A5131617B781B200ED5299 /* XmlParseHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XmlParseHelper.m; sourceTree = "<group>"; };
+		26A5131717B781B200ED5299 /* XmlNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XmlNode.h; sourceTree = "<group>"; };
+		26A5131817B781B200ED5299 /* XmlNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XmlNode.m; sourceTree = "<group>"; };
+		26A5131917B781B200ED5299 /* GDataTargetNamespace.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDataTargetNamespace.h; sourceTree = "<group>"; };
+		26A5131A17B781B200ED5299 /* GDataDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDataDefines.h; sourceTree = "<group>"; };
+		26A5131B17B781B200ED5299 /* GDataXMLNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDataXMLNode.h; sourceTree = "<group>"; };
+		26A5131C17B781B200ED5299 /* GDataXMLNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GDataXMLNode.m; sourceTree = "<group>"; };
 		26AE40D61790F39900A1EDEC /* libTPLibrary.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libTPLibrary.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		26AE40D91790F39900A1EDEC /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		26AE40DD1790F39900A1EDEC /* TPLibrary-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TPLibrary-Prefix.pch"; sourceTree = "<group>"; };
@@ -312,10 +329,6 @@
 		26AE41061791001500A1EDEC /* NSDictionary+TPCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+TPCategory.h"; sourceTree = "<group>"; };
 		26AE41071791001500A1EDEC /* NSDictionary+TPCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+TPCategory.m"; sourceTree = "<group>"; };
 		26AE412C1791218100A1EDEC /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
-		26B479C31792825100231C18 /* ServiceHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ServiceHelper.h; sourceTree = "<group>"; };
-		26B479C41792825100231C18 /* ServiceHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ServiceHelper.m; sourceTree = "<group>"; };
-		26B479C51792825100231C18 /* ServiceArgs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ServiceArgs.h; sourceTree = "<group>"; };
-		26B479C61792825100231C18 /* ServiceArgs.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ServiceArgs.m; sourceTree = "<group>"; };
 		26B479CA1792830500231C18 /* DownloadManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DownloadManager.h; sourceTree = "<group>"; };
 		26B479CB1792830500231C18 /* DownloadManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DownloadManager.m; sourceTree = "<group>"; };
 		26B479CC1792830500231C18 /* DownLoadArgs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DownLoadArgs.h; sourceTree = "<group>"; };
@@ -330,12 +343,6 @@
 		26B479EB179287BF00231C18 /* NetWorkConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetWorkConnection.h; sourceTree = "<group>"; };
 		26B479EC179287BF00231C18 /* NetWorkConnection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetWorkConnection.m; sourceTree = "<group>"; };
 		26B7A2F41791A5C9002BB336 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		26B7A2FB1791A66F002BB336 /* GDataXMLNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDataXMLNode.h; sourceTree = "<group>"; };
-		26B7A2FC1791A66F002BB336 /* GDataXMLNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GDataXMLNode.m; sourceTree = "<group>"; };
-		26B7A2FD1791A66F002BB336 /* GDataDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDataDefines.h; sourceTree = "<group>"; };
-		26B7A2FE1791A66F002BB336 /* GDataTargetNamespace.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDataTargetNamespace.h; sourceTree = "<group>"; };
-		26B7A2FF1791A66F002BB336 /* SoapXmlParseHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SoapXmlParseHelper.h; sourceTree = "<group>"; };
-		26B7A3001791A66F002BB336 /* SoapXmlParseHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SoapXmlParseHelper.m; sourceTree = "<group>"; };
 		26B7A3031791A6AB002BB336 /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
 		26B7A3061791A705002BB336 /* ASIDownloadCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIDownloadCache.h; sourceTree = "<group>"; };
 		26B7A3071791A705002BB336 /* ASIDownloadCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASIDownloadCache.m; sourceTree = "<group>"; };
@@ -608,12 +615,12 @@
 		26B479C21792823C00231C18 /* WebService */ = {
 			isa = PBXGroup;
 			children = (
-				26B479C31792825100231C18 /* ServiceHelper.h */,
-				26B479C41792825100231C18 /* ServiceHelper.m */,
-				26B479C51792825100231C18 /* ServiceArgs.h */,
-				26B479C61792825100231C18 /* ServiceArgs.m */,
-				26A19C2C17B12DF50049F221 /* ServiceResult.h */,
-				26A19C2D17B12DF50049F221 /* ServiceResult.m */,
+				26A5130C17B7819300ED5299 /* ServiceHelper.h */,
+				26A5130D17B7819300ED5299 /* ServiceHelper.m */,
+				26A5130E17B7819300ED5299 /* ServiceArgs.h */,
+				26A5130F17B7819300ED5299 /* ServiceArgs.m */,
+				26A5131017B7819300ED5299 /* ServiceResult.h */,
+				26A5131117B7819300ED5299 /* ServiceResult.m */,
 			);
 			name = WebService;
 			sourceTree = "<group>";
@@ -662,12 +669,14 @@
 		26B7A2FA1791A660002BB336 /* GDataXML */ = {
 			isa = PBXGroup;
 			children = (
-				26B7A2FB1791A66F002BB336 /* GDataXMLNode.h */,
-				26B7A2FC1791A66F002BB336 /* GDataXMLNode.m */,
-				26B7A2FD1791A66F002BB336 /* GDataDefines.h */,
-				26B7A2FE1791A66F002BB336 /* GDataTargetNamespace.h */,
-				26B7A2FF1791A66F002BB336 /* SoapXmlParseHelper.h */,
-				26B7A3001791A66F002BB336 /* SoapXmlParseHelper.m */,
+				26A5131517B781B200ED5299 /* XmlParseHelper.h */,
+				26A5131617B781B200ED5299 /* XmlParseHelper.m */,
+				26A5131717B781B200ED5299 /* XmlNode.h */,
+				26A5131817B781B200ED5299 /* XmlNode.m */,
+				26A5131917B781B200ED5299 /* GDataTargetNamespace.h */,
+				26A5131A17B781B200ED5299 /* GDataDefines.h */,
+				26A5131B17B781B200ED5299 /* GDataXMLNode.h */,
+				26A5131C17B781B200ED5299 /* GDataXMLNode.m */,
 			);
 			name = GDataXML;
 			sourceTree = "<group>";
@@ -768,8 +777,6 @@
 				26AE40FE1790F99C00A1EDEC /* UIScrollview+TPCategory.m in Sources */,
 				26AE41051790FE9D00A1EDEC /* NSData+TPCategory.m in Sources */,
 				26AE41081791001500A1EDEC /* NSDictionary+TPCategory.m in Sources */,
-				26B7A3011791A66F002BB336 /* GDataXMLNode.m in Sources */,
-				26B7A3021791A66F002BB336 /* SoapXmlParseHelper.m in Sources */,
 				26B7A3181791A705002BB336 /* ASIDownloadCache.m in Sources */,
 				26B7A3191791A705002BB336 /* ASINetworkQueue.m in Sources */,
 				26B7A31A1791A705002BB336 /* ASIDataDecompressor.m in Sources */,
@@ -778,8 +785,6 @@
 				26B7A31D1791A705002BB336 /* ASIAuthenticationDialog.m in Sources */,
 				26B7A31E1791A705002BB336 /* ASIHTTPRequest.m in Sources */,
 				26B7A32A1791A77D002BB336 /* Reachability.m in Sources */,
-				26B479C71792825100231C18 /* ServiceHelper.m in Sources */,
-				26B479C81792825100231C18 /* ServiceArgs.m in Sources */,
 				26B479CE1792830500231C18 /* DownloadManager.m in Sources */,
 				26B479CF1792830500231C18 /* DownLoadArgs.m in Sources */,
 				26B479D6179283C900231C18 /* SVGeocoder.m in Sources */,
@@ -815,7 +820,12 @@
 				26A31EF5179D63FE008AE896 /* MMDrawerController.m in Sources */,
 				26A31EF6179D63FE008AE896 /* MMDrawerVisualState.m in Sources */,
 				26A31EF7179D63FE008AE896 /* UIViewController+MMDrawerController.m in Sources */,
-				26A19C2E17B12DF50049F221 /* ServiceResult.m in Sources */,
+				26A5131217B7819300ED5299 /* ServiceHelper.m in Sources */,
+				26A5131317B7819300ED5299 /* ServiceArgs.m in Sources */,
+				26A5131417B7819300ED5299 /* ServiceResult.m in Sources */,
+				26A5131D17B781B200ED5299 /* XmlParseHelper.m in Sources */,
+				26A5131E17B781B200ED5299 /* XmlNode.m in Sources */,
+				26A5131F17B781B200ED5299 /* GDataXMLNode.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
