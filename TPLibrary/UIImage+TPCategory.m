@@ -222,21 +222,7 @@ CGFloat RadiansToDegrees(CGFloat radians) {return radians * 180/M_PI;};
 	return newImage;
 	
 }
-//图片转换为base64
-+(NSString *) image2String:(UIImage *)image{
-	NSData* pictureData = UIImageJPEGRepresentation(image,0.3);//进行图片压缩从0.0到1.0（0.0表示最大压缩，质量最低);
-	//NSLog(@"调用了image@String方法");
-	//NSLog(@"%@这个值是什么实现的？",pictureData);
-	NSString* pictureDataString = [pictureData base64EncodedString];//图片转码成为base64Encoding，
-	//NSLog(@"%@++++是空值么？",pictureDataString);
-	//NSLog(@"base64转码，的实验");
-	return pictureDataString;
-}
-+(UIImage *) string2Image:(NSString *)string{
-	UIImage *image = [UIImage imageWithData:[NSData dataFromBase64EncodedString:string]];
-	return image;
-}
-+(UIImage*)MergerImage:(UIImage*)merger mergerImage:(UIImage*)img position:(CGPoint)pos{
++(UIImage*)mergerImage:(UIImage*)img mergerImage:(UIImage*)merger position:(CGPoint)pos{
     UIGraphicsBeginImageContext(merger.size);
     //Draw image2
     [merger drawInRect:CGRectMake(0, 0, merger.size.width, merger.size.height)];
@@ -246,6 +232,27 @@ CGFloat RadiansToDegrees(CGFloat radians) {return radians * 180/M_PI;};
     UIGraphicsEndImageContext();
     return resultImage;
 }
++(UIImage*)createImageWithColor:(UIColor*)color{
+    CGRect rect=CGRectMake(0.0f, 0.0f, 1.0f, 1.0f);
+    UIGraphicsBeginImageContext(rect.size);
+    CGContextRef context=UIGraphicsGetCurrentContext();
+    CGContextSetFillColorWithColor(context, color.CGColor);
+    CGContextFillRect(context, rect);
+    UIImage *theImage=UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    return theImage;
+}
+//图片转换为base64
+-(NSString *) imageBase64String{
+	NSData* pictureData = UIImageJPEGRepresentation(self,0.3);//进行图片压缩从0.0到1.0（0.0表示最大压缩，质量最低);
+	NSString* pictureDataString = [pictureData base64EncodedString];//图片转码成为base64Encoding，
+	return pictureDataString;
+}
++(UIImage *) dataFromBase64String:(NSString *)string{
+	UIImage *image = [UIImage imageWithData:[NSData dataFromBase64EncodedString:string]];
+	return image;
+}
+
 
 + (UIImage*)imageWithContentsOfURL:(NSURL*)url {
 	NSError* error = nil;
@@ -500,5 +507,22 @@ CGFloat RadiansToDegrees(CGFloat radians) {return radians * 180/M_PI;};
 	
 	CGContextRestoreGState(context);
 	
+}
+/*
+ * save image local
+ */
+-(BOOL)saveImage:(NSString*)path{
+   return  [UIImagePNGRepresentation(self) writeToFile:path atomically:YES]; // 保存成功会返回YES
+}
+-(BOOL)saveImage:(NSString*)path withName:(NSString*)fileName{
+    NSString *filePath = [path stringByAppendingPathComponent:fileName];   // 保存文件的名称
+    return  [self saveImage:filePath];
+}
++ (UIImage *)getImageFromView:(UIView *)view{
+    UIGraphicsBeginImageContext(view.bounds.size);
+    [view.layer renderInContext:UIGraphicsGetCurrentContext()];
+    UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    return image;
 }
 @end

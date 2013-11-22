@@ -7,11 +7,7 @@
 //
 
 #import "NetWorkConnection.h"
-//#import <sys/socket.h>
-//#import <netinet/in.h>
-//#import <arpa/inet.h>
-//#import <netdb.h>
-//#import <SystemConfiguration/SCNetworkReachability.h>
+#import <CoreLocation/CoreLocation.h>
 
 @interface NetWorkConnection()
 - (void) updateInterfaceWithReachability: (Reachability*) curReach;
@@ -20,6 +16,7 @@
 
 @implementation NetWorkConnection
 @synthesize delegate;
+@synthesize hasNewWork;
 //单例模式
 + (NetWorkConnection *)sharedInstance{
     static dispatch_once_t  onceToken;
@@ -126,6 +123,14 @@
     }
     return NO;
 }
++(BOOL)isEnabledAccessURL:(NSString*)url{
+    NSURL *hostURL=[NSURL URLWithString:url];
+    Reachability *r =[Reachability reachabilityWithHostName:hostURL.host];
+    if ([r currentReachabilityStatus]==NotReachable) {
+        return NO;
+    }
+    return YES;
+}
 //判斷網路連接是否正常
 +(BOOL)IsEnableConnection{
       
@@ -165,6 +170,17 @@
 + (BOOL) IsEnable3G {
     return ([[Reachability reachabilityForInternetConnection] currentReachabilityStatus] != NotReachable);
 }
+//gps检测
++ (BOOL)locationServicesEnabled {
+    if (([CLLocationManager locationServicesEnabled]) && ([CLLocationManager authorizationStatus] == kCLAuthorizationStatusAuthorized)) {
+        //NSLog(@"手机gps定位已经开启");
+        return YES;
+    } else {
+        //NSLog(@"手机gps定位未开启");
+        return NO;
+    }
+}
+
 #pragma mark -
 #pragma mark 私有方法
 // 连接改变

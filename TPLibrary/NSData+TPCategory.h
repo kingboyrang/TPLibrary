@@ -32,7 +32,6 @@
 @property(nonatomic,readonly,getter=isEmpty) BOOL empty;
 
 @end
-
 /*
 	Base64 Methods
 
@@ -44,7 +43,6 @@
 	appreciated but not required.
 
  */
-
 @interface NSData (Base64Helper)
 ///--------------
 /// @name Hashing

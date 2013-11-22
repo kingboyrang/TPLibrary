@@ -33,10 +33,8 @@
  @return A MD5 string.
  */
 - (NSString *) stringFromMD5;
-
 /**
  Returns a string of the SHA1 sum of the receiver.
- 
  @return The string of the SHA1 sum of the receiver.
  */
 - (NSString *)SHA1Sum;
@@ -70,6 +68,9 @@
  @return True if the string is formatted properly as an email address.
  */
 - (BOOL) isEmail;
+- (BOOL) isURLString;
+- (BOOL) isNumberString;
+- (BOOL) containsChinese;
 /** Returns a `NSString` that properly replaces HTML specific character sequences.
  @return An escaped HTML string.
  */

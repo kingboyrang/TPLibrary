@@ -22,6 +22,7 @@ typedef void (^ListenerNetWorkResult)(NetworkStatus status,BOOL isConnection);
     ListenerNetWorkResult _listenerNetWorkResult;
 }
 @property(nonatomic,assign) id<NetWorkDelegate> delegate;
+@property(nonatomic,assign) BOOL hasNewWork;
 //单例模式
 + (NetWorkConnection *)sharedInstance;
 //实时监听连接
@@ -31,6 +32,8 @@ typedef void (^ListenerNetWorkResult)(NetworkStatus status,BOOL isConnection);
 
 //判断url是否可以访问
 +(BOOL)isEnabledURL:(NSString*)url;
+//判断url是否可以访问
++(BOOL)isEnabledAccessURL:(NSString*)url;
 //判斷網路是否连通
 +(BOOL)IsEnableConnection;
 +(BOOL)hasNetWork;
@@ -38,4 +41,6 @@ typedef void (^ListenerNetWorkResult)(NetworkStatus status,BOOL isConnection);
 + (BOOL)IsEnableWIFI;
 // 是否3G
 +(BOOL)IsEnable3G;
+//gps检测方法
++ (BOOL)locationServicesEnabled;
 @end

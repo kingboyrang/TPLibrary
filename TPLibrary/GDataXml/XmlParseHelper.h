@@ -7,14 +7,15 @@
 //
 
 #import <Foundation/Foundation.h>
-@class XmlNode;
-@class GDataXMLDocument;
+#import "XmlNode.h"
 @class GDataXMLNode;
+@class GDataXMLDocument;
 @interface XmlParseHelper : NSObject
 
 @property(nonatomic,retain) GDataXMLDocument *document;
 @property(nonatomic,readonly) XmlNode *xmlNode;
 
+-(void)setDataSource:(id)data;
 -(id)initWithData:(id)xml;
 //返回webservice内容
 -(NSString*)soapMessageResultXml:(NSString*)methodName;
@@ -43,4 +44,10 @@
 -(NSString*)selectSingleNodeValue:(NSString*)xpath nameSpaces:(NSDictionary*)spaces;
 -(NSArray*)selectNodeValues:(NSString*)xpath;
 -(NSArray*)selectNodeValues:(NSString*)xpath nameSpaces:(NSDictionary*)spaces;
+
+-(NSArray*)childNodesToObject:(NSString*)className;
+-(NSArray*)childNodesToArray;
+//辅助方法
+-(id)childsNodeToObject:(GDataXMLNode*)node objectName:(NSString*)className;
+-(NSArray*)nodesChildsNodesToObjects:(GDataXMLNode*)node objectName:(NSString*)className;
 @end
