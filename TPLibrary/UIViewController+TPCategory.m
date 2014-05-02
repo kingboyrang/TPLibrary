@@ -37,36 +37,4 @@
 -(BOOL)isIPAD{
     return [UIDevice isIPad];
 }
--(void)showErrorNoticeInView:(UIView*)view title:(NSString*)title message:(NSString*)message dismissError:(void (^)(void))dismiss;
-{
-    WBErrorNoticeView *notice = [WBErrorNoticeView errorNoticeInView:view title:title message:message];
-    [notice setDismissalBlock:^(BOOL dismissedInteractively) {
-        if (dismiss) {
-            dismiss();
-        }
-    }];
-    [notice show];
-}
--(void)showSuccessNoticeInView:(UIView*)view title:(NSString*)title
-{
-    WBSuccessNoticeView *notice = [WBSuccessNoticeView successNoticeInView:view title:title];
-    [notice show];
-}
--(void)showErrorNetWorkConnection{
-     [self showErrorNoticeInView:self.view title:@"Network Error" message:@"Check your network connection." dismissError:nil];
-}
--(void)showErrorNetWorkConnection:(UIView*)view title:(NSString*)title message:(NSString*)message dismissError:(void (^)(void))dismiss
-{
-   [self showErrorNoticeInView:view title:title message:message dismissError:dismiss];
-}
--(void)listenerNetwork{
-    [self listenerNetwork:self.view title:@"Network Error" message:@"Check your network connection." dismissError:nil];
-}
--(void)listenerNetwork:(UIView*)view title:(NSString*)title message:(NSString*)message dismissError:(void (^)(void))dismiss{
-    [[NetWorkConnection sharedInstance] dynamicListenerNetwork:^(NetworkStatus status, BOOL isConnection) {
-        if (!isConnection) {
-            [self showErrorNetWorkConnection:view title:title message:message dismissError:dismiss];
-        }
-    }];
-}
 @end

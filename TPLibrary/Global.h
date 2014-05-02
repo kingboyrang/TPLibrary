@@ -7,6 +7,7 @@
 //
 
 //获取设备的物理大小
+#define IOSVersion [[UIDevice currentDevice].systemVersion floatValue]
 #define DeviceRect [UIScreen mainScreen].bounds
 #define DeviceWidth [UIScreen mainScreen].bounds.size.width
 #define DeviceHeight [UIScreen mainScreen].bounds.size.height

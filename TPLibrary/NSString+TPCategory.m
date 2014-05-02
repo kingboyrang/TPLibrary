@@ -29,7 +29,7 @@
 }
 //向后查找字符串
 -(NSInteger)lastIndexOf:(NSString*)search{
-    NSRange r=[self rangeOfString:self options:NSBackwardsSearch];
+    NSRange r=[self rangeOfString:search options:NSBackwardsSearch];
     if (r.location!=NSNotFound) {
         return r.location;
     }
@@ -149,8 +149,8 @@
 - (NSString *) escapeHTML{
 	NSMutableString *s = [NSMutableString string];
 	
-	int start = 0;
-	int len = [self length];
+	NSInteger start = 0;
+	NSInteger len = [self length];
 	NSCharacterSet *chs = [NSCharacterSet characterSetWithCharactersInString:@"<>&\""];
 	
 	while (start < len) {

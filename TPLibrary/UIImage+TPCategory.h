@@ -42,6 +42,10 @@
  */
 +(UIImage*)createImageWithColor:(UIColor*)color;
 /*
+ * 生成圆角图片
+ */
++ (id)createRoundedRectImage:(UIImage*)image size:(CGSize)size radius:(NSInteger)r;
+/*
  * convert base64string to image
  */
 -(NSString *) imageBase64String;
@@ -58,7 +62,7 @@
 + (UIImage*)imageWithResourcesPathCompontent:(NSString*)pathCompontent;
 
 /*
- * Scales the image to the given size, NOT aspect
+ * Scales the image to the given size, NOT aspect 等比缩放图片
  */
 - (UIImage*)scaleToSize:(CGSize)size;
 
@@ -85,6 +89,10 @@
  * Aspect scales the image to a rect size
  */
 - (UIImage*)aspectScaleToSize:(CGSize)size;
+/*
+ * view生成图片
+ */
++(UIImage *)getImageFromView:(UIView *)view;
 
 /*
  * Masks the context with the image, then fills with the color
@@ -100,6 +108,4 @@
  */
 - (BOOL)saveImage:(NSString*)path;
 - (BOOL)saveImage:(NSString*)path withName:(NSString*)fileName;
-//获取view截图
-+ (UIImage *)getImageFromView:(UIView *)view;
 @end
