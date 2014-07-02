@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		01097081191328B000FC8684 /* CCDHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 0109707F191328B000FC8684 /* CCDHelper.m */; };
+		01097081191328B000FC8684 /* GCDHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 0109707F191328B000FC8684 /* GCDHelper.m */; };
 		0146FEDD1963997700ED58E6 /* NSDate+TPCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 0146FEDC1963997700ED58E6 /* NSDate+TPCategory.m */; };
 		0146FEE619639ADC00ED58E6 /* ASIServiceArgs.m in Sources */ = {isa = PBXBuildFile; fileRef = 0146FEDF19639ADC00ED58E6 /* ASIServiceArgs.m */; };
 		0146FEE719639ADC00ED58E6 /* ASIServiceResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 0146FEE119639ADC00ED58E6 /* ASIServiceResult.m */; };
@@ -97,7 +97,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		0109707F191328B000FC8684 /* CCDHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCDHelper.m; sourceTree = "<group>"; };
+		0109707F191328B000FC8684 /* GCDHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCDHelper.m; sourceTree = "<group>"; };
 		01097080191328B000FC8684 /* GCDHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCDHelper.h; sourceTree = "<group>"; };
 		0146FEDB1963997700ED58E6 /* NSDate+TPCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+TPCategory.h"; sourceTree = "<group>"; };
 		0146FEDC1963997700ED58E6 /* NSDate+TPCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+TPCategory.m"; sourceTree = "<group>"; };
@@ -252,7 +252,7 @@
 			isa = PBXGroup;
 			children = (
 				01097080191328B000FC8684 /* GCDHelper.h */,
-				0109707F191328B000FC8684 /* CCDHelper.m */,
+				0109707F191328B000FC8684 /* GCDHelper.m */,
 			);
 			name = GCD;
 			sourceTree = "<group>";
@@ -618,7 +618,7 @@
 				01C70D9F19132CFA006E3146 /* UIColor+TPCategory.m in Sources */,
 				01EA09A9183F4E3C00F42D9E /* UITextField+TPCategory.m in Sources */,
 				01EA0985183F4BDC00F42D9E /* ASIInputStream.m in Sources */,
-				01097081191328B000FC8684 /* CCDHelper.m in Sources */,
+				01097081191328B000FC8684 /* GCDHelper.m in Sources */,
 				01C70D9C19132CE3006E3146 /* UIImage+TPCategory.m in Sources */,
 				0146FEE719639ADC00ED58E6 /* ASIServiceResult.m in Sources */,
 				0146FEF619639B5E00ED58E6 /* NSObject+RMArchivable.m in Sources */,
