@@ -9,7 +9,7 @@
 #import "NSDate+TPCategory.h"
 
 @implementation NSDate (TPCategory)
-//获取今天是星期几
+//取得今天是星期幾
 -(NSInteger)dayOfWeek{
     NSCalendar *calendar = [NSCalendar currentCalendar];
     NSDateComponents *offsetComponents = [calendar components:(NSYearCalendarUnit | NSMonthCalendarUnit | NSDayCalendarUnit)
@@ -26,7 +26,7 @@
     }
     return result;
 }
-//获取每月有多少天
+//取得每月有多少天
 -(NSInteger)monthOfDay{
     NSCalendar *calendar = [NSCalendar currentCalendar];
     NSDateComponents *offsetComponents = [calendar components:(NSYearCalendarUnit | NSMonthCalendarUnit | NSDayCalendarUnit)
@@ -44,12 +44,26 @@
     }
     return 31;
 }
-//本周开始时间
+//取得当前月第一天
+- (NSDate *)monthFirstDay{
+    TKDateInformation info=[self dateInformation];
+    if (info.day==1) {
+        return self;
+    }
+    return [self dateByAddingDays:-(info.day-1)];
+}
+//取得当前月最后一天
+- (NSDate *)monthLastDay{
+    TKDateInformation info=[self dateInformation];
+    NSInteger total=[self monthOfDay]-info.day;
+    return [self dateByAddingDays:total];
+}
+//本周開始時間
 -(NSDate*)beginningOfWeek{
     NSInteger weekday=[self dayOfWeek];
     return  [self dateByAddingDays:(weekday-1)*-1];
 }
-//本周结束时间
+//本周结束時間
 - (NSDate *)endOfWeek{
     NSInteger weekday=[self dayOfWeek];
     if (weekday==7) {
@@ -57,7 +71,17 @@
     }
     return [self dateByAddingDays:7-weekday];
 }
-//日期添加几天
+//日期增加幾月
+-(NSDate*)dateByAddingMonths:(NSInteger)month{
+    NSDateComponents *c = [[NSDateComponents alloc] init];
+	c.month = month;
+    
+    NSDate *resultDate=[[NSCalendar currentCalendar] dateByAddingComponents:c toDate:self options:0];
+    [c release];
+    
+    return resultDate;
+}
+//日期增加幾天
 -(NSDate*)dateByAddingDays:(NSInteger)days{
     NSDateComponents *c = [[NSDateComponents alloc] init];
 	c.day = days;
@@ -72,9 +96,9 @@
     return  [self dateByAddingTimeInterval:day*interval];
      ***/
 }
-//日期添加几分钟
+//日期增加幾分鐘
 -(NSDate*)dateByAddingMinutes:(NSInteger)minute{
-    NSTimeInterval interval =60;//表示1分钟
+    NSTimeInterval interval =60;//表示1分鐘
     return  [self dateByAddingTimeInterval:minute*interval];
 }
 //日期格式化
@@ -85,7 +109,7 @@
 	[outputFormatter release];
 	return timestamp_str;
 }
-//字符串转换成时间
+//字串轉換成時間
 + (NSDate *)dateFromString:(NSString *)string withFormat:(NSString *)format {
 	NSDateFormatter *inputFormatter = [[NSDateFormatter alloc] init];
 	[inputFormatter setDateFormat:format];
@@ -93,11 +117,11 @@
 	[inputFormatter release];
 	return date;
 }
-//时间转换成字符串
+//時間轉換成字串
 + (NSString *)stringFromDate:(NSDate *)date withFormat:(NSString *)format {
 	return [date stringWithFormat:format];
 }
-//日期转化成民国时间
+//日期轉換成民國時間
 -(NSString*)dateToTW:(NSString *)string{
     NSString *str=[self stringWithFormat:string];
     int y=[[str substringWithRange:NSMakeRange(0, 4)] intValue];
