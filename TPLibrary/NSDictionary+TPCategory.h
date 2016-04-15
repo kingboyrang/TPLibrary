@@ -39,4 +39,7 @@
  */
 @property(nonatomic,readonly,getter=isEmpty) BOOL empty;
 
+// 生成属性代码
+- (void)createPropetyCode;
+
 @end
