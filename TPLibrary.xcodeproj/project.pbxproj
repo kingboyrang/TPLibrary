@@ -47,6 +47,7 @@
 		26B7A3241791A739002BB336 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26B7A3231791A739002BB336 /* SystemConfiguration.framework */; };
 		26B7A3261791A74D002BB336 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 26B7A3251791A74D002BB336 /* libz.dylib */; };
 		FF4FB11E1CC09C0300126B78 /* CacheDataUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = FF4FB11D1CC09C0300126B78 /* CacheDataUtil.m */; };
+		FF72ABB01CDC8B5400FE3C12 /* NSObject+TPCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = FF72ABAF1CDC8B5400FE3C12 /* NSObject+TPCategory.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -130,6 +131,8 @@
 		26B7A3251791A74D002BB336 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		FF4FB11C1CC09C0300126B78 /* CacheDataUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CacheDataUtil.h; sourceTree = "<group>"; };
 		FF4FB11D1CC09C0300126B78 /* CacheDataUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CacheDataUtil.m; sourceTree = "<group>"; };
+		FF72ABAE1CDC8B5400FE3C12 /* NSObject+TPCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+TPCategory.h"; sourceTree = "<group>"; };
+		FF72ABAF1CDC8B5400FE3C12 /* NSObject+TPCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+TPCategory.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -300,6 +303,8 @@
 				26AE40FA1790F7B800A1EDEC /* UIView+TPCategory.m */,
 				26A200EA17997D0700A7D3D1 /* UIViewController+TPCategory.h */,
 				26A200EB17997D0700A7D3D1 /* UIViewController+TPCategory.m */,
+				FF72ABAE1CDC8B5400FE3C12 /* NSObject+TPCategory.h */,
+				FF72ABAF1CDC8B5400FE3C12 /* NSObject+TPCategory.m */,
 			);
 			name = Category;
 			sourceTree = "<group>";
@@ -376,6 +381,7 @@
 				01C70D9F19132CFA006E3146 /* UIColor+TPCategory.m in Sources */,
 				01EA09A9183F4E3C00F42D9E /* UITextField+TPCategory.m in Sources */,
 				01097081191328B000FC8684 /* GCDHelper.m in Sources */,
+				FF72ABB01CDC8B5400FE3C12 /* NSObject+TPCategory.m in Sources */,
 				01C70D9C19132CE3006E3146 /* UIImage+TPCategory.m in Sources */,
 				0146FEF619639B5E00ED58E6 /* NSObject+RMArchivable.m in Sources */,
 			);
