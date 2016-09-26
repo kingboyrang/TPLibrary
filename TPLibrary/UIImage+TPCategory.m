@@ -12,6 +12,54 @@
 #pragma mark 内部方法
 CGFloat DegreesToRadians(CGFloat degrees) {return degrees * M_PI / 180;};
 CGFloat RadiansToDegrees(CGFloat radians) {return radians * 180/M_PI;};
+
+
+CGContextRef CreateARGBBitmapContext (CGImageRef inImage)
+{
+    CGContextRef    context = NULL;
+    CGColorSpaceRef colorSpace;
+    void *          bitmapData;
+    NSUInteger      bitmapByteCount;
+    NSUInteger      bitmapBytesPerRow;
+    
+    size_t pixelsWide = CGImageGetWidth(inImage);
+    size_t pixelsHigh = CGImageGetHeight(inImage);
+    bitmapBytesPerRow   = (pixelsWide * 4);
+    bitmapByteCount     = (bitmapBytesPerRow * pixelsHigh);
+    
+    colorSpace = CGColorSpaceCreateDeviceRGB();
+    if (colorSpace == NULL)
+        return nil;
+    
+    bitmapData = malloc( bitmapByteCount );
+    if (bitmapData == NULL)
+    {
+        CGColorSpaceRelease( colorSpace );
+        return nil;
+    }
+    
+    context = CGBitmapContextCreate (bitmapData,
+                                     pixelsWide,
+                                     pixelsHigh,
+                                     8,
+                                     bitmapBytesPerRow,
+                                     colorSpace,
+                                     kCGImageAlphaPremultipliedFirst);
+    
+    if (context == NULL)
+    {
+        free (bitmapData);
+        fprintf (stderr, "Context not created!");
+    }
+    
+    CGColorSpaceRelease( colorSpace );
+    
+    return context;
+}
+
+
+
+
 @implementation UIImage (ImageHelper)
 
 static void addRoundedRectToPath(CGContextRef context, CGRect rect, float ovalWidth,
@@ -562,4 +610,49 @@ static void addRoundedRectToPath(CGContextRef context, CGRect rect, float ovalWi
     NSString *filePath = [path stringByAppendingPathComponent:fileName];   // 保存文件的名稱
     return  [self saveImage:filePath];
 }
+
+/*
+ * 取得图片数据
+ */
+- (NSData *)ARGBData
+{
+    CGContextRef cgctx = CreateARGBBitmapContext(self.CGImage);
+    if (cgctx == NULL)
+        return nil;
+    
+    size_t w = CGImageGetWidth(self.CGImage);
+    size_t h = CGImageGetHeight(self.CGImage);
+    CGRect rect = {{0,0},{w,h}};
+    CGContextDrawImage(cgctx, rect, self.CGImage);
+    
+    void *data = CGBitmapContextGetData (cgctx);
+    CGContextRelease(cgctx);
+    
+    if (!data)
+        return nil;
+    
+    size_t dataSize = 4 * w * h; // ARGB = 4 8-bit components
+    return [NSData dataWithBytes:data length:dataSize];
+}
+
+/*
+ * 判断当前点是否为透明
+ */
+- (BOOL)isPointTransparent:(CGPoint)point
+{
+    NSData *rawData = [self ARGBData];  // See about caching this
+    if (rawData == nil)
+        return NO;
+    
+    size_t bpp = 4;
+    size_t bpr = self.size.width * 4;
+    
+    NSUInteger index = point.x * bpp + (point.y * bpr);
+    char *rawDataBytes = (char *)[rawData bytes];
+    
+    return rawDataBytes[index] == 0;
+    
+}
+
+
 @end

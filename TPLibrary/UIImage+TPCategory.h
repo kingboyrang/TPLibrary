@@ -200,4 +200,16 @@
  *  @return 保存是否成功
  */
 - (BOOL)saveImage:(NSString*)path withName:(NSString*)fileName;
+
+/**
+ *  取得图片数据
+ *  @return
+ */
+- (NSData *)ARGBData;
+
+/**
+ *  判断当前点是否为透明
+ *  @return  YES:透明 NO:非透明
+ */
+- (BOOL)isPointTransparent:(CGPoint)point;
 @end
