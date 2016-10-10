@@ -8,31 +8,74 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
+
 @interface NSString (TPCategory)
-/** Returns a `NSString`.
- @return a guid string.
+
+/**
+ *  生成guid值
+ *
+ *  @return 返回guid值
  */
-+(NSString*)createGUID;
-/** 向前查找字符串.
- @return 查找到字符串的位置,否则返回-1
++ (NSString*)createGUID;
+
+/**
+ *  @brief  判断字符串是否为空
+ *
+ *
+ *  @return YES表示字符串为空，NO表示字符串不为空
+ */
+- (BOOL)isEmpty;
+
+/**
+ *  向前查找字符串.
+ *
+ *  @param search 查询的内容
+ *
+ *  @return 查找到字符串的位置,否则返回NSNotFound
  */
 -(NSInteger)indexOf:(NSString*)search;
-/** 向后查找字符串.
- @return 查找到字符串的位置,否则返回-1
+
+/**
+ *  向后查找字符串
+ *
+ *  @param search 查询的内容
+ *
+ *  @return 查找到字符串的位置,否则返回NSNotFound
  */
 -(NSInteger)lastIndexOf:(NSString*)search;
-/** 去除字符串前后空格.
- @return 去除字符串前后空格的字符串
+
+/**
+ *  字符串去前后空格
+ *
+ *  @return 返回去空格后的内容
  */
 -(NSString*)Trim;
-/** 根据字体与宽度计算字符串的大小.
- @return 获取文本大小
+
+/**
+ *  @brief  取得text大小
+ *
+ *  @param  f   文本字体
+ *  @param  w   文本显示的最大宽度
+ *  @return 返回文本大小
  */
 -(CGSize)textSize:(UIFont*)f withWidth:(CGFloat)w;
-/** Returns an MD5 string of from the given `NSString`.
- @return A MD5 string.
+
+/**
+ *  字符串md5加密
+ *
+ *  @return 返回加密后的字符串
  */
 - (NSString *) stringFromMD5;
+
+
+/**
+ *  计算字符串字符长度（一个汉字算两个字符）
+ *
+ *  @return 返回字符串长度
+ */
+- (NSUInteger) unicodeLengthOfString;
+
+
 /**
  Returns a string of the SHA1 sum of the receiver.
  @return The string of the SHA1 sum of the receiver.
@@ -44,10 +87,21 @@
  @return The string of the SHA256 sum of the receiver.
  */
 - (NSString *)SHA256Sum;
-/** Returns a `NSString` that is URL friendly.
- @return A URL encoded string.
+
+/**
+ *  url字符串编码处理
+ *
+ *  @return  url编码字符串
  */
 -(NSString*)URLEncode;
+
+/**
+ *  url字符串解码处理
+ *
+ *  @return url解码字符串
+ */
+- (NSString *)URLDecoded;
+
 /**
  Returns a new string encoded for a URL parameter. (Deprecated)
  
@@ -57,15 +111,12 @@
  */
 - (NSString *)URLEncodedParameterString;
 
-/**
- Returns a new string decoded from a URL.
- 
- @return A new string decoded from a URL.
- */
-- (NSString *)URLDecodedString;
 
-/** Returns `YES` if a string is a valid email address, otherwise `NO`.
- @return True if the string is formatted properly as an email address.
+
+/**
+ *  判断是否为email
+ *
+ *  @return 是email字符中返回YES,否则为NO
  */
 - (BOOL) isEmail;
 - (BOOL) isURLString;
@@ -111,11 +162,7 @@
  @return Returns a string without the HTML elements.
  */
 - (NSString*) stringByRemovingHTML;
-/** Returns `YES` is a string has the substring, otherwise `NO`.
- @param substring The substring.
- @return `YES` if the substring is contained in the string, otherwise `NO`.
- */
-- (BOOL) hasString:(NSString*)substring;
+
 
 ///----------------------
 /// @name Base64 Encoding

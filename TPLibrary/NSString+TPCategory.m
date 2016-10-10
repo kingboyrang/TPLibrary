@@ -10,8 +10,12 @@
 #import "NSData+TPCategory.h"
 #import <CommonCrypto/CommonDigest.h>
 @implementation NSString (TPCategory)
-//生成一个guid值
-+(NSString*)createGUID{
+/**
+ *  生成guid值
+ *
+ *  @return 返回guid值
+ */
++ (NSString*)createGUID{
     CFUUIDRef uuid_ref = CFUUIDCreate(NULL);
     CFStringRef uuid_string_ref= CFUUIDCreateString(NULL, uuid_ref);
     CFRelease(uuid_ref);
@@ -19,50 +23,126 @@
     CFRelease(uuid_string_ref);
     return uuid;
 }
-//向前查找字符串
+
+/**
+ *  @brief  判断字符串是否为空
+ *
+ *
+ *  @return YES表示字符串为空，NO表示字符串不为空
+ */
+- (BOOL) isEmpty {
+    if ([[self Trim] length]>0) {
+        return NO;
+    }
+    return YES;
+}
+
+
+/**
+ *  向前查找字符串.
+ *
+ *  @param search 查询的内容
+ *
+ *  @return 查找到字符串的位置,否则返回NSNotFound
+ */
 -(NSInteger)indexOf:(NSString*)search{
     NSRange r=[self rangeOfString:search];
     if (r.location!=NSNotFound) {
         return r.location;
     }
-    return -1;
+    return NSNotFound;
 }
-//向后查找字符串
+
+/**
+ *  向后查找字符串
+ *
+ *  @param search 查询的内容
+ *
+ *  @return 查找到字符串的位置,否则返回NSNotFound
+ */
 -(NSInteger)lastIndexOf:(NSString*)search{
     NSRange r=[self rangeOfString:search options:NSBackwardsSearch];
     if (r.location!=NSNotFound) {
         return r.location;
     }
-    return -1;
+    return NSNotFound;
 }
-//去除字符串前后空格
+
+/**
+ *  字符串去前后空格
+ *
+ *  @return 返回去空格后的内容
+ */
 -(NSString*)Trim{
-    if (self) {
-        //whitespaceAndNewlineCharacterSet 去除前后空格与回车
-        //whitespaceCharacterSet 除前后空格
+    if (self&&[self length]>0) {
         return [self stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
     }
     return @"";
 }
-//获取文本大小
+
+/**
+ *  @brief  取得text大小
+ *
+ *  @param  f   文本字体
+ *  @param  w   文本显示的最大宽度
+ *  @return 返回文本大小
+ */
 -(CGSize)textSize:(UIFont*)f withWidth:(CGFloat)w{
+#if __IPHONE_OS_VERSION_MIN_REQUIRED >= 70000
+    NSDictionary *attr = @{NSFontAttributeName:f};
+    CGRect rect = [self boundingRectWithSize:CGSizeMake(w, CGFLOAT_MAX)
+                                     options:NSStringDrawingUsesLineFragmentOrigin
+                                  attributes:attr
+                                     context:nil];
+    return  rect.size;
+#else
     return  [self sizeWithFont:f constrainedToSize:CGSizeMake(w, CGFLOAT_MAX) lineBreakMode:NSLineBreakByWordWrapping];
+#endif
 }
-//产生MD5字符串
+
+/**
+ *  字符串md5加密
+ *
+ *  @return 返回加密后的字符串
+ */
 - (NSString *) stringFromMD5{
-    if(self == nil || [self length] == 0)
-        return nil;
-    const char *value = [self UTF8String];
     
-    unsigned char outputBuffer[CC_MD5_DIGEST_LENGTH];
-    CC_MD5(value, strlen(value), outputBuffer);
-    
-    NSMutableString *outputString = [[NSMutableString alloc] initWithCapacity:CC_MD5_DIGEST_LENGTH * 2];
-    for(NSInteger count = 0; count < CC_MD5_DIGEST_LENGTH; count++){
-        [outputString appendFormat:@"%02x",outputBuffer[count]];
+    if ([self isEmpty]) {
+        return  nil;
     }
-    return [outputString autorelease];
+    
+    const char *cStr = [self UTF8String];
+    unsigned char result[16];
+    CC_MD5( cStr, (CC_LONG)strlen(cStr), result );
+    return [[NSString stringWithFormat:
+             @"%02X%02X%02X%02X%02X%02X%02X%02X%02X%02X%02X%02X%02X%02X%02X%02X",
+             result[0], result[1], result[2], result[3],
+             result[4], result[5], result[6], result[7],
+             result[8], result[9], result[10], result[11],
+             result[12], result[13], result[14], result[15]
+             ] lowercaseString];
 }
+
+/**
+ *  计算字符串字符长度（一个汉字算两个字符）
+ *
+ *  @return 返回字符串长度
+ */
+- (NSUInteger) unicodeLengthOfString{
+    
+    if ([self isEmpty]) {
+        return 0;
+    }
+    
+    NSUInteger asciiLength = 0;
+    for (NSUInteger i = 0; i < self.length; i++)
+    {
+        unichar uc = [self characterAtIndex: i];
+        asciiLength += isascii(uc) ? 1 : 2;
+    }
+    return asciiLength;
+}
+
 - (NSString *)SHA1Sum {
 	const char *cstr = [self cStringUsingEncoding:NSUTF8StringEncoding];
 	NSData *data = [NSData dataWithBytes:cstr length:self.length];
@@ -76,25 +156,26 @@
 	return [data SHA256Sum];
 }
 
-//url字符串编码处理
+/**
+ *  url字符串编码处理
+ *
+ *  @return  url编码字符串
+ */
 -(NSString*)URLEncode{
     
-    NSString *encodedString = ( NSString *)CFURLCreateStringByAddingPercentEscapes(NULL,
-                                                                                   (CFStringRef)self,
-                                                                                   NULL,
-                                                                                   (CFStringRef)@"!*'();:@&=+$,/?%#[]",
-                                                                                   kCFStringEncodingUTF8);
-	
-	return encodedString;
-    /***
-    NSString * encodedString = (NSString *)CFURLCreateStringByAddingPercentEscapes(kCFAllocatorDefault,
-                                                                                   (CFStringRef)self,
-                                                                                   NULL,
-                                                                                   NULL,
-                                                                                   kCFStringEncodingUTF8);
+    NSString *encodedString = ( NSString *)CFBridgingRelease(CFURLCreateStringByAddingPercentEscapes(NULL,(CFStringRef)self,NULL,            (CFStringRef)@"!*'();:@&=+$,/?%#[]",kCFStringEncodingUTF8));
     return encodedString;
-     ***/
 }
+
+/**
+ *  url字符串解码处理
+ *
+ *  @return url解码字符串
+ */
+- (NSString *)URLDecoded {
+    return ( NSString *)CFBridgingRelease(CFURLCreateStringByReplacingPercentEscapesUsingEncoding(kCFAllocatorDefault,(CFStringRef)self,CFSTR(""),kCFStringEncodingUTF8));
+}
+
 - (NSString *)URLEncodedParameterString {
 	static CFStringRef toEscape = CFSTR(":/=,!$&'()*+;[]@#?");
     return ( NSString *)CFURLCreateStringByAddingPercentEscapes(kCFAllocatorDefault,
@@ -105,12 +186,11 @@
 }
 
 
-- (NSString *)URLDecodedString {
-	return ( NSString *)CFURLCreateStringByReplacingPercentEscapesUsingEncoding(kCFAllocatorDefault,
-																								 ( CFStringRef)self,
-																								 CFSTR(""),
-																								 kCFStringEncodingUTF8);
-}
+/**
+ *  判断是否为email
+ *
+ *  @return 是email字符中返回YES,否则为NO
+ */
 - (BOOL) isEmail{
 	
     NSString *emailRegEx =
@@ -271,10 +351,7 @@
     }
 	return html;
 }
-- (BOOL) hasString:(NSString*)substring{
-	return !([self rangeOfString:substring].location == NSNotFound);
-	
-}
+
 #pragma mark - Base64 Encoding
 
 - (NSString *)base64EncodedString  {

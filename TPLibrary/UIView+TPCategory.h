@@ -44,4 +44,19 @@
  The receiver will fade in in `0.2` seconds.
  */
 - (void)fadeIn;
+
+/**
+ *  取得所有的子view
+ *
+ *  @return 所有的子view
+ */
+- (NSArray *)allSubViews;
+
+/**
+ *  设置部份圆角
+ *
+ *  @param radio      圆角大小
+ *  @param rectCorner 圆角位置
+ */
+- (void)setCornerSize:(CGSize)radio location:(UIRectCorner)rectCorner;
 @end

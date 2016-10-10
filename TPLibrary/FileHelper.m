@@ -70,4 +70,52 @@
     }
     return YES;
 }
+
+/**
+ *  获取文件大小
+ *
+ *  @param path 文件路径
+ *
+ *  @return 文件大小
+ */
+- (long long)fileSizeAtPath:(NSString *)path{
+    NSFileManager *fileManager = [NSFileManager defaultManager];
+    
+    if ([fileManager fileExistsAtPath:path])
+    {
+        long long size = [fileManager attributesOfItemAtPath:path error:nil].fileSize;
+        return size;
+    }
+    
+    return 0;
+}
+
+/**
+ *  获取文件夹大小
+ *
+ *  @param path 文件路径
+ *
+ *  @return 文件夹大小
+ */
+- (long long)folderSizeAtPath:(NSString *)path{
+    NSFileManager *fileManager = [NSFileManager defaultManager];
+    
+    long long folderSize = 0;
+    
+    if ([fileManager fileExistsAtPath:path])
+    {
+        NSArray *childerFiles = [fileManager subpathsAtPath:path];
+        for (NSString *fileName in childerFiles)
+        {
+            NSString *fileAbsolutePath = [path stringByAppendingPathComponent:fileName];
+            if ([fileManager fileExistsAtPath:fileAbsolutePath])
+            {
+                long long size = [fileManager attributesOfItemAtPath:fileAbsolutePath error:nil].fileSize;
+                folderSize += size;
+            }
+        }
+    }
+    
+    return folderSize;
+}
 @end

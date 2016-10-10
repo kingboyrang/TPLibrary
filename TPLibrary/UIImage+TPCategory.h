@@ -212,4 +212,14 @@
  *  @return  YES:透明 NO:非透明
  */
 - (BOOL)isPointTransparent:(CGPoint)point;
+
+/**
+ *  图片上绘制文字
+ *
+ *  @param title    绘制的文字
+ *  @param fontSize 字体大小
+ *
+ *  @return
+ */
+- (UIImage *)imageWithTitle:(NSString *)title fontSize:(CGFloat)fontSize;
 @end

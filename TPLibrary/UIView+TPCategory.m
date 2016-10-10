@@ -48,4 +48,55 @@
 	} completion:nil];
 }
 
+/**
+ *  取得所有的子view
+ *
+ *  @return 所有的子view
+ */
+- (NSArray *)allSubViews{
+    return [self allSubViewsForView:self];
+}
+
+
+
+/**
+ *  设置部份圆角
+ *
+ *  @param radio      圆角大小
+ *  @param rectCorner 圆角位置
+ */
+- (void)setCornerSize:(CGSize)radio location:(UIRectCorner)rectCorner{
+
+    CGRect rect = self.bounds;
+    //CGSize radio = CGSizeMake(30, 30);//圆角尺寸
+    //UIRectCorner corner = UIRectCornerTopLeft|UIRectCornerTopRight;//这只圆角位置
+    UIBezierPath *path = [UIBezierPath bezierPathWithRoundedRect:rect byRoundingCorners:rectCorner cornerRadii:radio];
+    CAShapeLayer *masklayer = [[CAShapeLayer alloc]init];//创建shapelayer
+    masklayer.frame = self.bounds;
+    masklayer.path = path.CGPath;//设置路径
+    self.layer.mask = masklayer;
+}
+
+#pragma mark -私有方法
+/**
+ *  查找一个视图的所有子视图
+ *
+ *  @param view 要查询的视图
+ *
+ *  @return
+ */
+- (NSMutableArray *)allSubViewsForView:(UIView *)view
+{
+    NSMutableArray *array = [NSMutableArray arrayWithCapacity:0];
+    for (UIView *subView in view.subviews)
+    {
+        [array addObject:subView];
+        if (subView.subviews.count > 0)
+        {
+            [array addObjectsFromArray:[self allSubViewsForView:subView]];
+        }
+    }
+    return array;
+}
+
 @end

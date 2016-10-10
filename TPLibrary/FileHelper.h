@@ -55,4 +55,22 @@
  **/
 + (BOOL)existsFilePath:(NSString*)path;
 
+/**
+ *  获取文件大小
+ *
+ *  @param path 文件路径
+ *
+ *  @return 文件大小
+ */
+- (long long)fileSizeAtPath:(NSString *)path;
+
+/**
+ *  获取文件夹大小
+ *
+ *  @param path 文件路径
+ *
+ *  @return 文件夹大小
+ */
+- (long long)folderSizeAtPath:(NSString *)path;
+
 @end
