@@ -7,6 +7,7 @@
 //
 
 #import "LYLSliderView.h"
+#import "UIView+Extension.h"
 
 @interface LYLSliderView ()<UIScrollViewDelegate>
 
@@ -207,7 +208,8 @@
         width = item.Sw;
     }else
     {
-        width = [item.titleLabel.text sizeWithFont:item.titleLabel.font andMaxW:MAXFLOAT].width;
+        //width = [item.titleLabel.text sizeWithFont:item.titleLabel.font andMaxW:MAXFLOAT].width;
+        width=[self string:item.titleLabel.text sizeWithFont:item.titleLabel.font maxW:MAXFLOAT].width;
     }
     
     if (beFirst) {
@@ -254,7 +256,8 @@
         width = self.selected_item.Sw;
     }else
     {
-        width = [self.selected_item.titleLabel.text sizeWithFont:self.selected_item.titleLabel.font andMaxW:MAXFLOAT].width;
+        //width = [self.selected_item.titleLabel.text sizeWithFont:self.selected_item.titleLabel.font andMaxW:MAXFLOAT].width;
+        width=[self string:self.selected_item.titleLabel.text sizeWithFont:self.selected_item.titleLabel.font maxW:MAXFLOAT].width;
     }
     
     [UIView animateWithDuration:0.2 animations:^{
@@ -262,6 +265,15 @@
         self.sliderLine.frame = CGRectMake(rect.origin.x + (self.item_SW - width)/2, self.sliderLine.Y, width, self.slider_height);
     }];
     
+}
+
+#pragma mark -私有方法
+- (CGSize)string:(NSString *)str sizeWithFont:(UIFont *)font maxW:(CGFloat)maxW
+{
+    NSMutableDictionary *attrs = [NSMutableDictionary dictionary];
+    attrs[NSFontAttributeName] = font;
+    CGSize maxSize = CGSizeMake(maxW, MAXFLOAT);
+    return [str boundingRectWithSize:maxSize options:NSStringDrawingUsesLineFragmentOrigin |NSStringDrawingUsesFontLeading attributes:attrs context:nil].size;
 }
 
 

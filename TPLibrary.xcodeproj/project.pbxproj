@@ -58,6 +58,7 @@
 		FFB29A101EA6036A008635A8 /* LYLKeyChainForPassWord.m in Sources */ = {isa = PBXBuildFile; fileRef = FFB29A0B1EA6036A008635A8 /* LYLKeyChainForPassWord.m */; };
 		FFB29A111EA6036A008635A8 /* LGScrollLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = FFB29A0E1EA6036A008635A8 /* LGScrollLabel.m */; };
 		FFB29A151EA603AC008635A8 /* BasicTouchID.m in Sources */ = {isa = PBXBuildFile; fileRef = FFB29A141EA603AC008635A8 /* BasicTouchID.m */; };
+		FFB29A181EA60909008635A8 /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = FFB29A171EA60909008635A8 /* UIView+Extension.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -163,6 +164,8 @@
 		FFB29A0E1EA6036A008635A8 /* LGScrollLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LGScrollLabel.m; sourceTree = "<group>"; };
 		FFB29A131EA603AC008635A8 /* BasicTouchID.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BasicTouchID.h; sourceTree = "<group>"; };
 		FFB29A141EA603AC008635A8 /* BasicTouchID.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BasicTouchID.m; sourceTree = "<group>"; };
+		FFB29A161EA60909008635A8 /* UIView+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Extension.h"; sourceTree = "<group>"; };
+		FFB29A171EA60909008635A8 /* UIView+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Extension.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -360,6 +363,8 @@
 		FFB299F81EA602BB008635A8 /* MultipleViewsSlider(滑动多视图) */ = {
 			isa = PBXGroup;
 			children = (
+				FFB29A161EA60909008635A8 /* UIView+Extension.h */,
+				FFB29A171EA60909008635A8 /* UIView+Extension.m */,
 				FFB299F91EA602BB008635A8 /* LYLPageVC.h */,
 				FFB299FA1EA602BB008635A8 /* LYLPageVC.m */,
 				FFB299FB1EA602BB008635A8 /* LYLSliderView.h */,
@@ -482,6 +487,7 @@
 				26AE41081791001500A1EDEC /* NSDictionary+TPCategory.m in Sources */,
 				01C70D9B19132CE3006E3146 /* NSData+TPCategory.m in Sources */,
 				FFB299FD1EA602BB008635A8 /* LYLPageVC.m in Sources */,
+				FFB29A181EA60909008635A8 /* UIView+Extension.m in Sources */,
 				FFB29A101EA6036A008635A8 /* LYLKeyChainForPassWord.m in Sources */,
 				01C70DA819132D13006E3146 /* UIDevice+TPCategory.m in Sources */,
 				01C249AC19136CB900789F42 /* FileHelper.m in Sources */,
