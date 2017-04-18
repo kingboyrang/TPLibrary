@@ -49,6 +49,15 @@
 		FF1BB1331D99139600BFB0A1 /* IrregularShapedButton.m in Sources */ = {isa = PBXBuildFile; fileRef = FF1BB1321D99139600BFB0A1 /* IrregularShapedButton.m */; };
 		FF4FB11E1CC09C0300126B78 /* CacheDataUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = FF4FB11D1CC09C0300126B78 /* CacheDataUtil.m */; };
 		FF72ABB01CDC8B5400FE3C12 /* NSObject+TPCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = FF72ABAF1CDC8B5400FE3C12 /* NSObject+TPCategory.m */; };
+		FFB299F71EA6029E008635A8 /* HookUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = FFB299F61EA6029E008635A8 /* HookUtility.m */; };
+		FFB299FD1EA602BB008635A8 /* LYLPageVC.m in Sources */ = {isa = PBXBuildFile; fileRef = FFB299FA1EA602BB008635A8 /* LYLPageVC.m */; };
+		FFB299FE1EA602BB008635A8 /* LYLSliderView.m in Sources */ = {isa = PBXBuildFile; fileRef = FFB299FC1EA602BB008635A8 /* LYLSliderView.m */; };
+		FFB29A021EA602E0008635A8 /* LYLCollectionViewLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = FFB29A011EA602E0008635A8 /* LYLCollectionViewLayout.m */; };
+		FFB29A061EA6031C008635A8 /* WSShiningLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = FFB29A051EA6031C008635A8 /* WSShiningLabel.m */; };
+		FFB29A0F1EA6036A008635A8 /* LYLKeyChain.m in Sources */ = {isa = PBXBuildFile; fileRef = FFB29A091EA6036A008635A8 /* LYLKeyChain.m */; };
+		FFB29A101EA6036A008635A8 /* LYLKeyChainForPassWord.m in Sources */ = {isa = PBXBuildFile; fileRef = FFB29A0B1EA6036A008635A8 /* LYLKeyChainForPassWord.m */; };
+		FFB29A111EA6036A008635A8 /* LGScrollLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = FFB29A0E1EA6036A008635A8 /* LGScrollLabel.m */; };
+		FFB29A151EA603AC008635A8 /* BasicTouchID.m in Sources */ = {isa = PBXBuildFile; fileRef = FFB29A141EA603AC008635A8 /* BasicTouchID.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -136,6 +145,24 @@
 		FF4FB11D1CC09C0300126B78 /* CacheDataUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CacheDataUtil.m; sourceTree = "<group>"; };
 		FF72ABAE1CDC8B5400FE3C12 /* NSObject+TPCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+TPCategory.h"; sourceTree = "<group>"; };
 		FF72ABAF1CDC8B5400FE3C12 /* NSObject+TPCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+TPCategory.m"; sourceTree = "<group>"; };
+		FFB299F51EA6029E008635A8 /* HookUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HookUtility.h; sourceTree = "<group>"; };
+		FFB299F61EA6029E008635A8 /* HookUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HookUtility.m; sourceTree = "<group>"; };
+		FFB299F91EA602BB008635A8 /* LYLPageVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYLPageVC.h; sourceTree = "<group>"; };
+		FFB299FA1EA602BB008635A8 /* LYLPageVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYLPageVC.m; sourceTree = "<group>"; };
+		FFB299FB1EA602BB008635A8 /* LYLSliderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYLSliderView.h; sourceTree = "<group>"; };
+		FFB299FC1EA602BB008635A8 /* LYLSliderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYLSliderView.m; sourceTree = "<group>"; };
+		FFB29A001EA602E0008635A8 /* LYLCollectionViewLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYLCollectionViewLayout.h; sourceTree = "<group>"; };
+		FFB29A011EA602E0008635A8 /* LYLCollectionViewLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYLCollectionViewLayout.m; sourceTree = "<group>"; };
+		FFB29A041EA6031C008635A8 /* WSShiningLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSShiningLabel.h; sourceTree = "<group>"; };
+		FFB29A051EA6031C008635A8 /* WSShiningLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WSShiningLabel.m; sourceTree = "<group>"; };
+		FFB29A081EA6036A008635A8 /* LYLKeyChain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYLKeyChain.h; sourceTree = "<group>"; };
+		FFB29A091EA6036A008635A8 /* LYLKeyChain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYLKeyChain.m; sourceTree = "<group>"; };
+		FFB29A0A1EA6036A008635A8 /* LYLKeyChainForPassWord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYLKeyChainForPassWord.h; sourceTree = "<group>"; };
+		FFB29A0B1EA6036A008635A8 /* LYLKeyChainForPassWord.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYLKeyChainForPassWord.m; sourceTree = "<group>"; };
+		FFB29A0D1EA6036A008635A8 /* LGScrollLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LGScrollLabel.h; sourceTree = "<group>"; };
+		FFB29A0E1EA6036A008635A8 /* LGScrollLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LGScrollLabel.m; sourceTree = "<group>"; };
+		FFB29A131EA603AC008635A8 /* BasicTouchID.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BasicTouchID.h; sourceTree = "<group>"; };
+		FFB29A141EA603AC008635A8 /* BasicTouchID.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BasicTouchID.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -212,6 +239,8 @@
 		01EA09AA183F4EE900F42D9E /* Uitils */ = {
 			isa = PBXGroup;
 			children = (
+				FFB299F51EA6029E008635A8 /* HookUtility.h */,
+				FFB299F61EA6029E008635A8 /* HookUtility.m */,
 				FF4FB11C1CC09C0300126B78 /* CacheDataUtil.h */,
 				FF4FB11D1CC09C0300126B78 /* CacheDataUtil.m */,
 				01C249AA19136CB900789F42 /* FileHelper.h */,
@@ -260,6 +289,12 @@
 		26AE40DB1790F39900A1EDEC /* TPLibrary */ = {
 			isa = PBXGroup;
 			children = (
+				FFB29A121EA603AC008635A8 /* TouchID(指纹验证) */,
+				FFB29A071EA6036A008635A8 /* KeyChain(敏感信息存储) */,
+				FFB29A0C1EA6036A008635A8 /* LGScrollLabel(滚动字条) */,
+				FFB29A031EA6031C008635A8 /* ShimmerLable(闪光文字) */,
+				FFB299FF1EA602E0008635A8 /* CollectionLayout(瀑布流) */,
+				FFB299F81EA602BB008635A8 /* MultipleViewsSlider(滑动多视图) */,
 				FF1BB1301D99137600BFB0A1 /* CustomUI */,
 				015A24F71913270900E5D68C /* GCD */,
 				01EA09AA183F4EE900F42D9E /* Uitils */,
@@ -322,6 +357,70 @@
 			path = CustomUI;
 			sourceTree = "<group>";
 		};
+		FFB299F81EA602BB008635A8 /* MultipleViewsSlider(滑动多视图) */ = {
+			isa = PBXGroup;
+			children = (
+				FFB299F91EA602BB008635A8 /* LYLPageVC.h */,
+				FFB299FA1EA602BB008635A8 /* LYLPageVC.m */,
+				FFB299FB1EA602BB008635A8 /* LYLSliderView.h */,
+				FFB299FC1EA602BB008635A8 /* LYLSliderView.m */,
+			);
+			name = "MultipleViewsSlider(滑动多视图)";
+			path = MultipleViewsSlider;
+			sourceTree = "<group>";
+		};
+		FFB299FF1EA602E0008635A8 /* CollectionLayout(瀑布流) */ = {
+			isa = PBXGroup;
+			children = (
+				FFB29A001EA602E0008635A8 /* LYLCollectionViewLayout.h */,
+				FFB29A011EA602E0008635A8 /* LYLCollectionViewLayout.m */,
+			);
+			name = "CollectionLayout(瀑布流)";
+			path = CollectionLayout;
+			sourceTree = "<group>";
+		};
+		FFB29A031EA6031C008635A8 /* ShimmerLable(闪光文字) */ = {
+			isa = PBXGroup;
+			children = (
+				FFB29A041EA6031C008635A8 /* WSShiningLabel.h */,
+				FFB29A051EA6031C008635A8 /* WSShiningLabel.m */,
+			);
+			name = "ShimmerLable(闪光文字)";
+			path = ShimmerLable;
+			sourceTree = "<group>";
+		};
+		FFB29A071EA6036A008635A8 /* KeyChain(敏感信息存储) */ = {
+			isa = PBXGroup;
+			children = (
+				FFB29A081EA6036A008635A8 /* LYLKeyChain.h */,
+				FFB29A091EA6036A008635A8 /* LYLKeyChain.m */,
+				FFB29A0A1EA6036A008635A8 /* LYLKeyChainForPassWord.h */,
+				FFB29A0B1EA6036A008635A8 /* LYLKeyChainForPassWord.m */,
+			);
+			name = "KeyChain(敏感信息存储)";
+			path = KeyChain;
+			sourceTree = "<group>";
+		};
+		FFB29A0C1EA6036A008635A8 /* LGScrollLabel(滚动字条) */ = {
+			isa = PBXGroup;
+			children = (
+				FFB29A0D1EA6036A008635A8 /* LGScrollLabel.h */,
+				FFB29A0E1EA6036A008635A8 /* LGScrollLabel.m */,
+			);
+			name = "LGScrollLabel(滚动字条)";
+			path = LGScrollLabel;
+			sourceTree = "<group>";
+		};
+		FFB29A121EA603AC008635A8 /* TouchID(指纹验证) */ = {
+			isa = PBXGroup;
+			children = (
+				FFB29A131EA603AC008635A8 /* BasicTouchID.h */,
+				FFB29A141EA603AC008635A8 /* BasicTouchID.m */,
+			);
+			name = "TouchID(指纹验证)";
+			path = TouchID;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -377,16 +476,25 @@
 				0146FEEC19639AFA00ED58E6 /* XmlParseHelper.m in Sources */,
 				26AE40FB1790F7B900A1EDEC /* UIView+TPCategory.m in Sources */,
 				FF1BB1331D99139600BFB0A1 /* IrregularShapedButton.m in Sources */,
+				FFB29A021EA602E0008635A8 /* LYLCollectionViewLayout.m in Sources */,
 				26AE40FE1790F99C00A1EDEC /* UIScrollview+TPCategory.m in Sources */,
 				0146FEF719639B5E00ED58E6 /* NSObject+RMCopyable.m in Sources */,
 				26AE41081791001500A1EDEC /* NSDictionary+TPCategory.m in Sources */,
 				01C70D9B19132CE3006E3146 /* NSData+TPCategory.m in Sources */,
+				FFB299FD1EA602BB008635A8 /* LYLPageVC.m in Sources */,
+				FFB29A101EA6036A008635A8 /* LYLKeyChainForPassWord.m in Sources */,
 				01C70DA819132D13006E3146 /* UIDevice+TPCategory.m in Sources */,
 				01C249AC19136CB900789F42 /* FileHelper.m in Sources */,
 				0146FEDD1963997700ED58E6 /* NSDate+TPCategory.m in Sources */,
 				26A200EC17997D0700A7D3D1 /* UIViewController+TPCategory.m in Sources */,
+				FFB299FE1EA602BB008635A8 /* LYLSliderView.m in Sources */,
+				FFB29A061EA6031C008635A8 /* WSShiningLabel.m in Sources */,
 				0146FEF819639B5E00ED58E6 /* NSUserDefaults+RMSaveCustomObject.m in Sources */,
+				FFB299F71EA6029E008635A8 /* HookUtility.m in Sources */,
+				FFB29A151EA603AC008635A8 /* BasicTouchID.m in Sources */,
+				FFB29A0F1EA6036A008635A8 /* LYLKeyChain.m in Sources */,
 				01EA0967183F4B7D00F42D9E /* XmlNode.m in Sources */,
+				FFB29A111EA6036A008635A8 /* LGScrollLabel.m in Sources */,
 				01C249AF19137C1E00789F42 /* NSTimer+TPCategory.m in Sources */,
 				FF4FB11E1CC09C0300126B78 /* CacheDataUtil.m in Sources */,
 				01C70DA519132D03006E3146 /* NSString+TPCategory.m in Sources */,
