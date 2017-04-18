@@ -16,8 +16,8 @@ static char const touchIDkey;
     
     LAContext *context = [[LAContext alloc]init];
     
-    context.localizedFallbackTitle = [self isNULL:fallbackTitle] ? @"输入密码": fallbackTitle;
-    message = [self isNULL:message] ? @"通过Home键验证已有指纹"  : message;
+    context.localizedFallbackTitle = [self isEmpty:fallbackTitle] ? @"输入密码": fallbackTitle;
+    message = [self isEmpty:message] ? @"通过Home键验证已有指纹"  : message;
     NSError *error = nil;
     
     BasicTouchID *touchID = objc_getAssociatedObject(self, &touchIDkey);
@@ -190,7 +190,7 @@ static char const touchIDkey;
     
 }
 
-- (BOOL)isNULL:(id)string{
++ (BOOL)isEmpty:(id)string{
     
     if (string == nil) {
         return YES;
